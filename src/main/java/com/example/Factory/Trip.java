@@ -138,4 +138,5 @@ public abstract class Trip {
     public void setFare(double fare) {
         this.fare = fare;
     }
+
 }

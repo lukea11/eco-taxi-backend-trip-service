@@ -16,4 +16,5 @@ public class StandardTrip extends Trip {
     public StandardTrip() {
         super();
     }
+
 }
