@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import com.google.protobuf.Timestamp;
 import java.time.Instant;
 
-import java.util.Date;
 
 @Entity
 @Table(name = "trips")
@@ -18,7 +17,7 @@ public abstract class Trip {
     private int tripId;
 
     @Column(name = "user_id", nullable = false)
-    private int userId;
+    private long userId; //changed to long
 
     @Enumerated(EnumType.STRING)  // Maps the Enum to a string column in the database
     @Column(name = "trip_status", nullable = false)
@@ -30,36 +29,43 @@ public abstract class Trip {
     @Column(name = "destination", nullable = false)
     private String destination;
 
-    // @Temporal(TemporalType.TIMESTAMP)  // To store date and time
-    @Column(name = "date", nullable = false)
+    @Column(name = "distance")
+    private double distance;
+
+    @Column(name = "fare")
+    private double fare;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "date")
     private Timestamp date;
 
     @Column(name = "trip_rating")
     private int tripRating;
 
-    public Trip(int tripId, int userId, TripStatus tripStatus, String pickupLocation, String destination, Timestamp date) {
-        this.tripId = tripId;
+    public Trip(long userId, TripStatus tripStatus, String pickupLocation, String destination, double distance, double fare, Timestamp date, int tripRating) {
         this.userId = userId;
         this.tripStatus = tripStatus;
         this.pickupLocation = pickupLocation;
         this.destination = destination;
+        this.distance = distance;
+        this.fare = fare;
         this.date = date;
+        this.tripRating = tripRating;
     }
 
     public Trip() {
-        this.userId = 0;  
+        this.userId = 0;
         this.tripStatus = TripStatus.INCOMPLETED;
-        this.pickupLocation = "";  
-        this.destination = "";  
+        this.pickupLocation = "";
+        this.destination = "";
+        this.distance = 0;
+        this.fare = 0;
         this.date = Timestamp.newBuilder()
                 .setSeconds(Instant.now().getEpochSecond())
                 .setNanos(Instant.now().getNano())
                 .build();
+        this.tripRating = 0;
     }
-
-    public Trip(int tripId, int userId, TripStatus tripStatus, String pickupLocation, String destination, Date date, int tripRating) {
-    }
-
 
     public int getTripId() {
         return tripId;
@@ -69,11 +75,11 @@ public abstract class Trip {
         this.tripId = tripId;
     }
 
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 
@@ -117,5 +123,19 @@ public abstract class Trip {
         this.tripRating = tripRating;
     }
 
-    // private TimeStamp Builder
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
+    public double getFare() {
+        return fare;
+    }
+
+    public void setFare(double fare) {
+        this.fare = fare;
+    }
 }
