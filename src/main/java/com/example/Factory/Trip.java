@@ -16,13 +16,6 @@ public abstract class Trip {
     @Column(name = "trip_id")
     private int tripId;
 
-    @Column(name = "user_id", nullable = false)
-    private long userId; //changed to long
-
-    @Enumerated(EnumType.STRING)  // Maps the Enum to a string column in the database
-    @Column(name = "trip_status", nullable = false)
-    private TripStatus tripStatus;
-
     @Column(name = "pickup_location", nullable = false)
     private String pickupLocation;
 
@@ -35,22 +28,34 @@ public abstract class Trip {
     @Column(name = "fare")
     private double fare;
 
+    @Column(name = "card_number", nullable = false)
+    private String cardNumber;
+
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "date")
-    private Timestamp date;
+    @Column(name = "estimated_arrival_date_time")
+    private Timestamp estimatedArrivalDateTime;
 
-    @Column(name = "trip_rating")
-    private int tripRating;
+    @Column(name = "estimated_waiting_time")
+    private long estimatedWaitingTime;
 
-    public Trip(long userId, TripStatus tripStatus, String pickupLocation, String destination, double distance, double fare, Timestamp date, int tripRating) {
+    @Enumerated(EnumType.STRING)  // Maps the Enum to a string column in the database
+    @Column(name = "trip_status", nullable = false)
+    private TripStatus tripStatus;
+
+    @Column(name = "user_id", nullable = false)
+    private long userId;
+
+    public Trip(long userId, TripStatus tripStatus, String pickupLocation, String destination, double distance, double fare,
+                String cardNumber, Timestamp estimatedArrivalDateTime, long estimatedWaitingTime) {
         this.userId = userId;
         this.tripStatus = tripStatus;
         this.pickupLocation = pickupLocation;
         this.destination = destination;
         this.distance = distance;
         this.fare = fare;
-        this.date = date;
-        this.tripRating = tripRating;
+        this.cardNumber = cardNumber;
+        this.estimatedArrivalDateTime = estimatedArrivalDateTime;
+        this.estimatedWaitingTime = estimatedWaitingTime;
     }
 
     public Trip() {
@@ -60,11 +65,12 @@ public abstract class Trip {
         this.destination = "";
         this.distance = 0;
         this.fare = 0;
-        this.date = Timestamp.newBuilder()
-                .setSeconds(Instant.now().getEpochSecond())
+        this.cardNumber = "";
+        this.estimatedArrivalDateTime = Timestamp.newBuilder()
+                .setSeconds(Instant.now().plusSeconds(300).getEpochSecond())
                 .setNanos(Instant.now().getNano())
                 .build();
-        this.tripRating = 0;
+        this.estimatedWaitingTime = 0;
     }
 
     public int getTripId() {
@@ -107,22 +113,6 @@ public abstract class Trip {
         this.destination = destination;
     }
 
-    public Timestamp getDate() {
-        return date;
-    }
-
-    public void setDate(Timestamp date) {
-        this.date = date;
-    }
-
-    public int getTripRating() {
-        return tripRating;
-    }
-
-    public void setTripRating(int tripRating) {
-        this.tripRating = tripRating;
-    }
-
     public double getDistance() {
         return distance;
     }
@@ -137,6 +127,30 @@ public abstract class Trip {
 
     public void setFare(double fare) {
         this.fare = fare;
+    }
+
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    public Timestamp getEstimatedArrivalDateTime() {
+        return estimatedArrivalDateTime;
+    }
+
+    public void setEstimatedArrivalDateTime(Timestamp estimatedArrivalDateTime) {
+        this.estimatedArrivalDateTime = estimatedArrivalDateTime;
+    }
+
+    public long getEstimatedWaitingTime() {
+        return estimatedWaitingTime;
+    }
+
+    public void setEstimatedWaitingTime(long estimatedWaitingTime) {
+        this.estimatedWaitingTime = estimatedWaitingTime;
     }
 
 }

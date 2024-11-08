@@ -9,8 +9,9 @@ import com.google.protobuf.Timestamp;
 @Table(name = "standard_trips")  // Defines the table for StandardTrip
 public class StandardTrip extends Trip {
 
-    public StandardTrip(long userId, TripStatus tripStatus, String pickupLocation, String destination, double distance, double fare, Timestamp date, int tripRating) {
-        super(userId, tripStatus, pickupLocation, destination, distance, fare, date, tripRating);
+    public StandardTrip(long userId, TripStatus tripStatus, String pickupLocation, String destination, double distance, double fare,
+                        String cardNumber, Timestamp estimatedArrivalDateTime, long estimatedWaitingTime) {
+        super(userId, tripStatus, pickupLocation, destination, distance, fare, cardNumber, estimatedArrivalDateTime, estimatedWaitingTime);
     }
 
     public StandardTrip() {
