@@ -4,25 +4,39 @@ import com.example.Interfaces.IPreviewTrip;
 import io.grpc.stub.StreamObserver;
 import proto.grpc.Trip;
 
+import com.google.maps.GeoApiContext;
+import com.google.maps.GeocodingApi;
+import com.google.maps.DistanceMatrixApi;
+import com.google.maps.errors.ApiException;
+import com.google.maps.model.GeocodingResult;
+import com.google.maps.model.LatLng;
+import com.google.maps.model.DistanceMatrix;
+import com.google.maps.model.DistanceMatrixElement;
+import com.google.maps.model.TravelMode;
+import java.io.IOException;
+
 public class TripPreviewer implements IPreviewTrip {
+    private final GeoApiContext geoApiContext;
     // private final com.example.Repository.TripRepository tripRepository;
     // private final com.example.Factory.ActionFactory actionFactory;  // Use the interface
 
     public TripPreviewer(){
-
+        this.geoApiContext = new GeoApiContext.Builder() // Google API
+                .apiKey(System.getenv("AIzaSyC7OkG0T-WWCXE63zCCllkH7DXL6MM8WV8"))
+                .build();
     }
-
 
     @Override
     public void preview(Trip.SearchTripPreviewRequest request, StreamObserver<Trip.SearchTripPreviewResponse> responseObserver) {
-        String pickup = request.getPickup();
+        String pickup = request.getPickup(); // Should be street name
         String destination = request.getDestination();
 
 
         // Communicate with API to find nearest locations
         String adjustedPickup;
         String adjustedDestination;
-
+        LatLng pickupLocation = getCoordinates(pickup);
+        LatLng destinationLocation = getCoordinates(destination);
         // Communicate with API to find
         //rainfall, traffic..
 
@@ -56,6 +70,30 @@ public class TripPreviewer implements IPreviewTrip {
 
          */
 
+    }
+
+    // Finds coordinates based on the entered address
+    private LatLng getCoordinates(String address) throws InterruptedException, ApiException, IOException, IOException {
+        GeocodingResult[] results = GeocodingApi.geocode(geoApiContext, address).await();
+        if (results.length > 0) {
+            return results[0].geometry.location;
+        }
+        throw new IllegalArgumentException("Address not found: " + address);
+    }
+
+    // Calculates the distance between 2 sets of coordinates
+    private double calculateDistanceBetweenLocations(LatLng pickup, LatLng destination) throws InterruptedException, ApiException, IOException {
+        DistanceMatrix matrix = DistanceMatrixApi.newRequest(geoApiContext)
+                .origins(pickup)
+                .destinations(destination)
+                .mode(TravelMode.DRIVING)
+                .await();
+
+        DistanceMatrixElement element = matrix.rows[0].elements[0];
+        if (element.distance != null) {
+            return element.distance.inMeters / 1000.0; // Convert to kilometers
+        }
+        throw new IllegalArgumentException("Could not calculate distance between locations.");
     }
 
     // private methods for calculation
