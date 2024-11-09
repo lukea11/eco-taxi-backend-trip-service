@@ -28,7 +28,6 @@ public class TripPreviewer implements IPreviewTrip {
     // private final com.example.Factory.ActionFactory actionFactory;  // Use the interface
 
     public TripPreviewer() {
-    public TripPreviewer(){
         this.geoApiContext = new GeoApiContext.Builder() // Google API
                 .apiKey(System.getenv("AIzaSyC7OkG0T-WWCXE63zCCllkH7DXL6MM8WV8"))
                 .build();
@@ -58,13 +57,13 @@ public class TripPreviewer implements IPreviewTrip {
                 jsonResponse.append(scanner.nextLine());
             }
             scanner.close();
-        // Communicate with API to find nearest locations
-        String adjustedPickup;
-        String adjustedDestination;
-        LatLng pickupLocation = getCoordinates(pickup);
-        LatLng destinationLocation = getCoordinates(destination);
-        // Communicate with API to find
-        //rainfall, traffic..
+            // Communicate with API to find nearest locations
+            String adjustedPickup;
+            String adjustedDestination;
+            LatLng pickupLocation = getCoordinates(pickup);
+            LatLng destinationLocation = getCoordinates(destination);
+            // Communicate with API to find
+            //rainfall, traffic..
 
             JSONObject jsonObject = new JSONObject(jsonResponse.toString());
             JSONArray featuresArray = jsonObject.getJSONArray("features");
@@ -146,6 +145,6 @@ public class TripPreviewer implements IPreviewTrip {
 
     private double calculateDistance(String pickup, String destination) {
         return 10.5; // Placeholder value in kilometers
-    }
+    }*/
 
 }
