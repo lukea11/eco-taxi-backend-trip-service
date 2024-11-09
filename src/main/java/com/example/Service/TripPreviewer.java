@@ -92,4 +92,5 @@ public class TripPreviewer implements IPreviewTrip {
     private double calculateDistance(String pickup, String destination) {
         return 10.5; // Placeholder value in kilometers
     }
+
 }

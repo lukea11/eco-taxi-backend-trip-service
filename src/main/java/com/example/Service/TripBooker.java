@@ -78,4 +78,5 @@ public class TripBooker implements IBookTrip {
                 throw new IllegalArgumentException("Unknown BookingStatus: " + bookingStatus);
         }
     }
+
 }
