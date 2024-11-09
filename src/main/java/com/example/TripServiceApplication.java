@@ -21,6 +21,17 @@ public class TripServiceApplication {
         server.start();  // Start the server
         System.out.println("Server started, waiting for termination...");
         server.awaitTermination();  // Wait for server termination
+
+        try {
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/trips_schema",
+                    "root",
+                    "1977"
+            );
+            System.out.println("Database connection successful!");
+        } catch (SQLException e) {
+            System.out.println("Database connection failed!");
+        }
     }
 }
 
