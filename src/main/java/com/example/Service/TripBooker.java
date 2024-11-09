@@ -20,7 +20,7 @@ public class TripBooker implements IBookTrip {
 
         Trip.ConfirmBookingResponse.Builder response = Trip.ConfirmBookingResponse.newBuilder();
         // set attributes of response
-        response.setResult("com.example.Factory.Trip Successfully Booked!");
+        response.setResult("Trip Successfully Booked!");
 
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
