@@ -1,8 +1,10 @@
 package com.example.Repository;
 
-import com.example.Factory.Trip;
-
+import java.sql.*;
 import java.util.ArrayList;
+import com.example.Factory.Trip;
+import com.example.Enums.TripStatus;
+import proto.grpc.Trip.BookingStatus;
 
 public class TripRepository implements ITripRepository{
 
