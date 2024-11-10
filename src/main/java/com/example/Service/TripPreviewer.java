@@ -20,14 +20,15 @@ import com.google.maps.model.LatLng;
 import com.google.maps.model.DistanceMatrix;
 import com.google.maps.model.DistanceMatrixElement;
 import com.google.maps.model.TravelMode;
-import java.io.IOException;
 
 public class TripPreviewer implements IPreviewTrip {
+    private ICalculateFare fareCalculator;
     private final GeoApiContext geoApiContext;
     // private final com.example.Repository.TripRepository tripRepository;
     // private final com.example.Factory.ActionFactory actionFactory;  // Use the interface
 
     public TripPreviewer() {
+        this.fareCalculator = new StandardFareCalculator();
         this.geoApiContext = new GeoApiContext.Builder() // Google API
                 .apiKey(System.getenv("AIzaSyC7OkG0T-WWCXE63zCCllkH7DXL6MM8WV8"))
                 .build();
@@ -75,11 +76,15 @@ public class TripPreviewer implements IPreviewTrip {
             nearestTaxiCoordinates[1] = coordinates.getJSONArray(0).getDouble(1);
 
             estimatedWaitingTime = calculateWaitingTime(numOfAvailableTaxis);
-            distance = calculateDistance(pickup, destination);
-            fare = calculateFare(distance);
+            distance = calculateDistanceBetweenLocations(pickupLocation, destinationLocation);
+            fare = fareCalculator.calculate();
 
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        } catch (ApiException e) {
+            throw new RuntimeException(e);
         }
 
         Trip.SearchTripPreviewResponse.Builder response = Trip.SearchTripPreviewResponse.newBuilder();
@@ -104,7 +109,7 @@ public class TripPreviewer implements IPreviewTrip {
     }
 
     // Finds coordinates based on the entered address
-    private LatLng getCoordinates(String address) throws InterruptedException, ApiException, IOException, IOException {
+    private LatLng getCoordinates(String address) throws InterruptedException, ApiException, IOException {
         GeocodingResult[] results = GeocodingApi.geocode(geoApiContext, address).await();
         if (results.length > 0) {
             return results[0].geometry.location;
@@ -127,24 +132,9 @@ public class TripPreviewer implements IPreviewTrip {
         throw new IllegalArgumentException("Could not calculate distance between locations.");
     }
 
-    // private methods for calculation
-
-    /*
-    private double calculateFare(double distance){
-        double rate; // can make it dependent on time of day
-        return rate*distance;
-    private double calculateFare(double distance) {
-        double rate = 1.2; // to change based on google api
-        return rate * distance;
-    }
-
     private int calculateWaitingTime(int taxiCount) {
         double multiplier = 2.5; // to change
         return (int) Math.max(60, 600 - taxiCount * multiplier);
     }
-
-    private double calculateDistance(String pickup, String destination) {
-        return 10.5; // Placeholder value in kilometers
-    }*/
 
 }
