@@ -4,8 +4,10 @@ import com.example.Interfaces.*;
 import io.grpc.stub.StreamObserver;
 import proto.grpc.Trip;
 import proto.grpc.TripServiceGrpc;
+import org.springframework.stereotype.Service;
 
 // Controller Class
+@Service
 public class TripService extends TripServiceGrpc.TripServiceImplBase {
     // facade design pattern
     private final IViewTrips tripViewer;

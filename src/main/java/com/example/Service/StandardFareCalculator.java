@@ -1,7 +1,9 @@
 package com.example.Service;
 
 import java.time.LocalTime;
+import org.springframework.stereotype.Service;
 
+@Service
 public class StandardFareCalculator implements ICalculateFare{
 
     @Override

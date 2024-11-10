@@ -2,6 +2,7 @@ package com.example.Service;
 
 import com.example.Interfaces.IPreviewTrip;
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 import proto.grpc.Trip;
 import java.net.URL;
 import java.net.HttpURLConnection;
@@ -28,6 +29,7 @@ import com.google.maps.model.DistanceMatrix;
 import com.google.maps.model.DistanceMatrixElement;
 import com.google.maps.model.TravelMode;
 
+@Service
 public class TripPreviewer implements IPreviewTrip {
     private final GeoApiContext geoApiContext;
     private final StandardFareCalculator fareCalculator;

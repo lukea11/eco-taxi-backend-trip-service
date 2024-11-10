@@ -7,8 +7,10 @@ import com.example.Factory.StandardTrip;
 import com.example.Factory.Trip;
 import com.example.Enums.TripStatus;
 import com.google.protobuf.InvalidProtocolBufferException;
+import org.springframework.stereotype.Repository;
 import proto.grpc.Trip.BookingStatus;
 
+@Repository
 public class TripRepository implements ITripRepository{
 
 
@@ -26,7 +28,7 @@ public class TripRepository implements ITripRepository{
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/trips_schema",
                     "root",
-                    "1977"
+                    "Iamhungry123"
             );
             System.out.println("Database connection successful!");
         } catch (SQLException e) {

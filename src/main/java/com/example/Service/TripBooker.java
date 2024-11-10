@@ -7,11 +7,13 @@ import com.example.Interfaces.IBookTrip;
 import com.example.Repository.TripRepository;
 import io.grpc.stub.StreamObserver;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import proto.grpc.Trip.ConfirmBookingRequest;
 import proto.grpc.Trip.ConfirmBookingResponse;
 import proto.grpc.Trip.BookingStatus;
 import com.google.protobuf.Timestamp;
 
+@Service
 public class TripBooker implements IBookTrip {
 
     @Autowired

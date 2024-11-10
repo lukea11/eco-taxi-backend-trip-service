@@ -4,11 +4,13 @@ import com.example.Interfaces.IViewTrips;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import org.checkerframework.common.value.qual.EnsuresMinLenIf;
+import org.springframework.stereotype.Service;
 import proto.grpc.Trip;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class TripsViewer implements IViewTrips {
     private Object Comparator;
 

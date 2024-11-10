@@ -3,8 +3,10 @@ package com.example.Service;
 import com.example.Interfaces.IUpdateTrip;
 import com.google.protobuf.Timestamp;
 import io.grpc.stub.StreamObserver;
+import org.springframework.stereotype.Service;
 import proto.grpc.Trip;
 
+@Service
 public class TripUpdater implements IUpdateTrip {
     @Override
     public void update(Trip.UpdateBookingRequest request, StreamObserver<Trip.UpdateBookingResponse> responseObserver) {
