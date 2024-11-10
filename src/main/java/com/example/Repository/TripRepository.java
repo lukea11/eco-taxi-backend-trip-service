@@ -2,8 +2,11 @@ package com.example.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
+
+import com.example.Factory.StandardTrip;
 import com.example.Factory.Trip;
 import com.example.Enums.TripStatus;
+import com.google.protobuf.InvalidProtocolBufferException;
 import proto.grpc.Trip.BookingStatus;
 
 public class TripRepository implements ITripRepository{
@@ -130,7 +133,7 @@ public class TripRepository implements ITripRepository{
 
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                Trip trip = new Trip(
+                Trip trip = new StandardTrip(
                     resultSet.getLong("user_id"),
                     TripStatus.valueOf(resultSet.getString("trip_status")),
                     resultSet.getString("pickup_location"),
@@ -146,6 +149,8 @@ public class TripRepository implements ITripRepository{
         } catch (SQLException e) {
             System.out.println("Failed to retrieve trips!");
             e.printStackTrace();
+        } catch (InvalidProtocolBufferException e) {
+            throw new RuntimeException(e);
         }
         return trips;
     }
