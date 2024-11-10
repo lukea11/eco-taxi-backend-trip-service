@@ -2,18 +2,17 @@ package com.example.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
+import com.example.Enums.TripStatus;
 import com.example.Factory.StandardTrip;
 import com.example.Factory.Trip;
-import com.example.Enums.TripStatus;
 import com.google.protobuf.InvalidProtocolBufferException;
 import org.springframework.stereotype.Repository;
 import proto.grpc.Trip.BookingStatus;
 
 @Repository
 public class TripRepository implements ITripRepository{
-
-
 
     private static Connection connection;
 
@@ -104,7 +103,7 @@ public class TripRepository implements ITripRepository{
     }
 
     @Override
-    public ArrayList<Trip> findAllTrips(int page, int limit, int userId, ArrayList<BookingStatus> statuses, boolean asc) {
+    public ArrayList<Trip> findAllTrips(int page, int limit, int userId, List<BookingStatus> statuses, boolean asc) {
         StringBuilder query = new StringBuilder("SELECT * FROM trips WHERE user_id = ?");
 
         if (statuses != null && !statuses.isEmpty()) {
@@ -132,8 +131,8 @@ public class TripRepository implements ITripRepository{
                     preparedStatement.setString(index++, status.name());
                 }
             }
-            preparedStatement.setInt(index++, limit);
-            preparedStatement.setInt(index, (page - 1) * limit);
+            preparedStatement.setInt(index++, (int) limit);
+            preparedStatement.setInt(index, (int) ((page - 1) * limit));
 
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -158,25 +157,4 @@ public class TripRepository implements ITripRepository{
         }
         return trips;
     }
-
-    
-    /*@Override
-    public Trip findIncompletedTrip(int userId) {
-        return null;
-    }
-
-    @Override
-    public boolean updateTripStatus(int tripId, proto.grpc.Trip.BookingStatus newBookingStatus) {
-        return false;
-    }
-
-    @Override
-    public boolean insertNewTrip(Trip trip) {
-        return false;
-    }
-
-    @Override
-    public ArrayList<Trip> findAllTrips(int page, int limit, int userId, ArrayList<proto.grpc.Trip.BookingStatus> statuses, boolean asc) {
-        return null;
-    }*/
 }

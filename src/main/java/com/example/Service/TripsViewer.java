@@ -1,17 +1,18 @@
 package com.example.Service;
 
+import com.example.Enums.TripStatus;
 import com.example.Interfaces.IViewTrips;
+import com.example.Repository.ITripRepository;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import org.checkerframework.common.value.qual.EnsuresMinLenIf;
-import org.springframework.stereotype.Service;
 import proto.grpc.Trip;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
 public class TripsViewer implements IViewTrips {
+    private ITripRepository tripRepository;
     private Object Comparator;
 
     @Override
@@ -25,7 +26,7 @@ public class TripsViewer implements IViewTrips {
         // read from database
         // create list of trip objects
         // store in bookingHistory as TripBooking objects
-        List<Trip.TripBooking> bookingHistory = new ArrayList<>(); // Fetch data from MySQL
+        List<com.example.Factory.Trip> bookingHistory = tripRepository.findAllTrips((int) page, (int) limit, (int) id, statuses, order); // Fetch data from MySQL
 
         // create Pagination Object
         // Just an example here, plug in the correct values
@@ -45,7 +46,7 @@ public class TripsViewer implements IViewTrips {
             // set attributes of response
             response.setPagination(pagination);
 
-            for (Trip.TripBooking booking : bookingHistory) {
+            for (com.example.Factory.Trip booking : bookingHistory) {
                 Trip.TripBooking grpcBooking = Trip.TripBooking.newBuilder()
                         .setId(booking.getId())
                         .setPickup(booking.getPickup())
@@ -55,7 +56,7 @@ public class TripsViewer implements IViewTrips {
                         .setCardNumber(booking.getCardNumber())
                         .setEstimatedArrivalDateTime(booking.getEstimatedArrivalDateTime()) // convert Instant to protobuf Timestamp if necessary
                         .setEstimatedWaitingTime(booking.getEstimatedWaitingTime())
-                        .setBookingStatus(Trip.BookingStatus.valueOf(booking.getBookingStatus().name())) // Convert to gRPC enum
+                        .setBookingStatus(Trip.BookingStatus.valueOf(booking.getTripStatus().name())) // Convert to gRPC enum
                         .setUserId(booking.getUserId())
                         .build();
                 response.addResult(grpcBooking);
@@ -63,6 +64,19 @@ public class TripsViewer implements IViewTrips {
 
             responseObserver.onNext(response.build());
             responseObserver.onCompleted();
+        }
+    }
+
+    private TripStatus mapBookingStatusToTripStatus(Trip.BookingStatus bookingStatus) {
+        switch (bookingStatus) {
+            case INCOMPLETED:
+                return TripStatus.INCOMPLETED;
+            case COMPLETED:
+                return TripStatus.COMPLETED;
+            case CANCELED:
+                return TripStatus.CANCELED;
+            default:
+                throw new IllegalArgumentException("Unknown BookingStatus: " + bookingStatus);
         }
     }
 }

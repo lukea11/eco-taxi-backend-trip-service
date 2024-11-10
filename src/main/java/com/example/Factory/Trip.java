@@ -153,4 +153,11 @@ public abstract class Trip {
         this.estimatedWaitingTime = estimatedWaitingTime;
     }
 
+    public long getId() {
+        return this.tripId;
+    }
+
+    public String getPickup() {
+        return this.pickupLocation;
+    }
 }
