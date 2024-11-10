@@ -160,6 +160,36 @@ public class TripRepository implements ITripRepository{
 
     @Override
     public int getTotalPages(int limit, int id, List<BookingStatus> statuses) {
+        StringBuilder query = new StringBuilder("SELECT COUNT(*) AS total FROM trips WHERE user_id = ?");
+
+        if (statuses != null && !statuses.isEmpty()) {
+            query.append(" AND trip_status IN (");
+            for (int i = 0; i < statuses.size(); i++) {
+                query.append("?");
+                if (i < statuses.size() - 1) {
+                    query.append(", ");
+                }
+            }
+            query.append(")");
+        }
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query.toString())) {
+            preparedStatement.setInt(1, userId);
+            int index = 2;
+            if (statuses != null && !statuses.isEmpty()) {
+                for (BookingStatus status : statuses) {
+                    preparedStatement.setString(index++, status.name());
+                }
+            }
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                int totalRecords = resultSet.getInt("total");
+                return (int) Math.ceil((double) totalRecords / limit);
+            }
+        } catch (SQLException e) {
+            System.out.println("Failed to calculate total pages!");
+            e.printStackTrace();
+        }
         return 0;
     }
 }
