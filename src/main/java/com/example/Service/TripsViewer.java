@@ -37,7 +37,7 @@ public class TripsViewer implements IViewTrips {
                 .setTotalPage(10)    // Set total pages
                 .build();
 
-        if (bookingHistory.size() == 0){
+        if (bookingHistory.isEmpty()){
             responseObserver.onError(Status.NOT_FOUND.withDescription("No Trips Found").withCause(new TripNotFoundException("ensure correct filters provided in request or make a new Trip")).asException());
         }
 
