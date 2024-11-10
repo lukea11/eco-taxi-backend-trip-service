@@ -1,6 +1,7 @@
 package com.example.Service;
 
 import com.example.Interfaces.IPreviewTrip;
+import com.example.Repository.ITripRepository;
 import io.grpc.stub.StreamObserver;
 import org.springframework.stereotype.Service;
 import proto.grpc.Trip;

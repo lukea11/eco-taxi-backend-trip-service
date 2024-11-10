@@ -4,6 +4,7 @@ import com.example.Factory.Trip;
 import com.example.Factory.TripCreator;
 import com.example.Enums.TripStatus;
 import com.example.Interfaces.IBookTrip;
+import com.example.Repository.ITripRepository;
 import com.example.Repository.TripRepository;
 import io.grpc.stub.StreamObserver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ import com.google.protobuf.Timestamp;
 public class TripBooker implements IBookTrip {
 
     @Autowired
-    private TripRepository tripRepository;
+    private ITripRepository tripRepository;
 
     private TripCreator tripCreator = new TripCreator(); // Factory instance
 

@@ -27,14 +27,26 @@ public class TripsViewer implements IViewTrips {
         // create list of trip objects
         // store in bookingHistory as TripBooking objects
         List<com.example.Factory.Trip> bookingHistory = tripRepository.findAllTrips((int) page, (int) limit, (int) id, statuses, order); // Fetch data from MySQL
+        long totalPages = (long) tripRepository.getTotalPages((int) limit, (int) id, statuses);
+
+        // For Pagination Object
+        long nextPage = 0, previousPage = 0;
+        if (page == 1){
+            nextPage = -1;
+        } else if (page == totalPages) {
+            previousPage = -1;
+        } else{
+            nextPage = page-1;
+            previousPage = page+1;
+        }
 
         // create Pagination Object
         // Just an example here, plug in the correct values
         Trip.Pagination pagination = Trip.Pagination.newBuilder()
-                .setCurrentPage(1)   // Set current page
-                .setPrevPage(0)      // Set previous page (or any other value)
-                .setNextPage(2)      // Set next page
-                .setTotalPage(10)    // Set total pages
+                .setCurrentPage(page)   // Set current page
+                .setPrevPage(previousPage)      // Set previous page (or any other value)
+                .setNextPage(nextPage)      // Set next page
+                .setTotalPage(totalPages)    // Set total pages
                 .build();
 
         if (bookingHistory.isEmpty()){

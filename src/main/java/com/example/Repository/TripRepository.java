@@ -131,8 +131,8 @@ public class TripRepository implements ITripRepository{
                     preparedStatement.setString(index++, status.name());
                 }
             }
-            preparedStatement.setInt(index++, (int) limit);
-            preparedStatement.setInt(index, (int) ((page - 1) * limit));
+            preparedStatement.setInt(index++, limit);
+            preparedStatement.setInt(index, ((page - 1) * limit));
 
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -156,5 +156,10 @@ public class TripRepository implements ITripRepository{
             throw new RuntimeException(e);
         }
         return trips;
+    }
+
+    @Override
+    public int getTotalPages(int limit, int id, List<BookingStatus> statuses) {
+        return 0;
     }
 }
