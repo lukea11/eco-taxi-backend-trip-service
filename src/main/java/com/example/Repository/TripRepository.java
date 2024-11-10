@@ -42,7 +42,7 @@ public class TripRepository implements ITripRepository{
             preparedStatement.setLong(1, userId);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
-                return new Trip(
+                return new StandardTrip(
                     resultSet.getLong("user_id"),
                     TripStatus.valueOf(resultSet.getString("trip_status")),
                     resultSet.getString("pickup_location"),
@@ -57,6 +57,8 @@ public class TripRepository implements ITripRepository{
         } catch (SQLException e) {
             System.out.println("Failed to find incomplete trip!");
             e.printStackTrace();
+        } catch (InvalidProtocolBufferException e) {
+            throw new RuntimeException(e);
         }
         return null;
     }
