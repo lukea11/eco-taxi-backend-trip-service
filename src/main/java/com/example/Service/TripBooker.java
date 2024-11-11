@@ -4,7 +4,6 @@ import com.example.Factory.Trip;
 import com.example.Factory.TripCreator;
 import com.example.Enums.TripStatus;
 import com.example.Interfaces.IBookTrip;
-import com.example.Repository.ITripRepository;
 import com.example.Repository.TripRepository;
 import io.grpc.stub.StreamObserver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ import com.google.protobuf.Timestamp;
 public class TripBooker implements IBookTrip {
 
     @Autowired
-    private ITripRepository tripRepository;
+    private TripRepository tripRepository;
 
     private TripCreator tripCreator = new TripCreator(); // Factory instance
 
@@ -45,13 +44,12 @@ public class TripBooker implements IBookTrip {
             newTrip.setDestination(destination);
             newTrip.setDistance(distance);
             newTrip.setFare(fare);
-            newTrip.setEstimatedArrivalDateTime(estimatedArrivalDateTime);
+            newTrip.setEstimatedArrivalDateTime(convertToSqlTimestamp(estimatedArrivalDateTime));
             newTrip.setEstimatedWaitingTime(estimatedWaitingTime);
             newTrip.setCardNumber(cardNumber);
 
-            boolean isInserted = tripRepository.insertNewTrip(newTrip);
-            String resultMessage = isInserted ? "Trip Successfully Booked!" : "Trip booking failed. Please try again.";
-
+            boolean savedTrip = tripRepository.insertNewTrip(newTrip);
+            String resultMessage = (savedTrip) ? "Trip Successfully Booked!" : "Trip booking failed. Please try again.";
             ConfirmBookingResponse response = ConfirmBookingResponse.newBuilder()
                     .setResult(resultMessage)
                     .build();
@@ -67,6 +65,10 @@ public class TripBooker implements IBookTrip {
             responseObserver.onNext(errorResponse);
             responseObserver.onCompleted();
         }
+    }
+    // Convert `protobuf.Timestamp` to `java.sql.Timestamp`
+    private java.sql.Timestamp convertToSqlTimestamp(Timestamp protobufTimestamp) {
+        return new java.sql.Timestamp(protobufTimestamp.getSeconds() * 1000);
     }
 
     private TripStatus mapBookingStatusToTripStatus(BookingStatus bookingStatus) {

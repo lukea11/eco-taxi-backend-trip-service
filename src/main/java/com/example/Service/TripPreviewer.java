@@ -1,7 +1,6 @@
 package com.example.Service;
 
 import com.example.Interfaces.IPreviewTrip;
-import com.example.Repository.ITripRepository;
 import io.grpc.stub.StreamObserver;
 import org.springframework.stereotype.Service;
 import proto.grpc.Trip;
@@ -36,8 +35,8 @@ public class TripPreviewer implements IPreviewTrip {
     private final StandardFareCalculator fareCalculator;
 
     public TripPreviewer() {
-        this.geoApiContext = new GeoApiContext.Builder() // Google API
-                .apiKey(System.getenv("AIzaSyC7OkG0T-WWCXE63zCCllkH7DXL6MM8WV8"))
+        this.geoApiContext = new GeoApiContext.Builder()
+                .apiKey("AIzaSyC7OkG0T-WWCXE63zCCllkH7DXL6MM8WV8")  // Hardcoded key
                 .build();
         this.fareCalculator = new StandardFareCalculator();
     }
@@ -48,7 +47,7 @@ public class TripPreviewer implements IPreviewTrip {
         String destination = request.getDestination();
 
         double fare = 0.0;
-        Timestamp estimatedArrivalDateTime = Timestamp.getDefaultInstance();
+        Timestamp estimatedArrivalDateTime;
         long estimatedWaitingTime = 0;
         double distance = 0.0;
         double[] nearestTaxiCoordinates = new double[2];
@@ -139,7 +138,7 @@ public class TripPreviewer implements IPreviewTrip {
         response.setDistance(distance);
         response.setFare(fare);
 
-        estimatedArrivalDateTime = Timestamp.newBuilder()
+        estimatedArrivalDateTime = Timestamp.newBuilder() // can use protobuf timestamp since there is no interaction with database
                 .setSeconds(System.currentTimeMillis() / 1000 + estimatedWaitingTime)
                 .build();
         response.setEstimatedArrivalDateTime(estimatedArrivalDateTime);
@@ -182,13 +181,13 @@ public class TripPreviewer implements IPreviewTrip {
         double multiplier = 1.0; // Base multiplier
 
         if (taxiCount <= 0) {
-            multiplier = 5.0; // No taxis available, set a long waiting time
+            multiplier = 1.0; // No taxis available, set a long waiting time
         } else if (taxiCount <= 5) {
-            multiplier = 3.0; // Fewer taxis, longer wait
+            multiplier = 1.5; // Fewer taxis, longer wait
         } else if (taxiCount <= 10) {
-            multiplier = 1.5; // Moderate wait
+            multiplier = 3.0; // Moderate wait
         } else {
-            multiplier = 1.0; // More taxis, shorter wait
+            multiplier = 5.0; // More taxis, shorter wait
         }
 
         // Calculate the estimated waiting time

@@ -3,7 +3,7 @@ package com.example.Factory;
 import com.example.Enums.TripStatus;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import com.google.protobuf.Timestamp;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "standard_trips")  // Defines the table for StandardTrip

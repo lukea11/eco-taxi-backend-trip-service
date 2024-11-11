@@ -10,6 +10,7 @@ import com.example.Factory.Trip;
 import com.google.protobuf.InvalidProtocolBufferException;
 import org.springframework.stereotype.Repository;
 import proto.grpc.Trip.BookingStatus;
+import java.sql.Timestamp;
 
 @Repository
 public class TripRepository implements ITripRepository{
@@ -43,23 +44,22 @@ public class TripRepository implements ITripRepository{
             preparedStatement.setLong(1, userId);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
+                java.sql.Timestamp sqlTimestamp = resultSet.getTimestamp("estimated_arrival_date_time");
                 return new StandardTrip(
-                    resultSet.getLong("user_id"),
-                    TripStatus.valueOf(resultSet.getString("trip_status")),
-                    resultSet.getString("pickup_location"),
-                    resultSet.getString("destination"),
-                    resultSet.getDouble("distance"),
-                    resultSet.getDouble("fare"),
-                    resultSet.getString("card_number"),
-                    com.google.protobuf.Timestamp.parseFrom(resultSet.getBytes("estimated_arrival_date_time")),
-                    resultSet.getLong("estimated_waiting_time")
+                        resultSet.getLong("user_id"),
+                        TripStatus.valueOf(resultSet.getString("trip_status")),
+                        resultSet.getString("pickup_location"),
+                        resultSet.getString("destination"),
+                        resultSet.getDouble("distance"),
+                        resultSet.getDouble("fare"),
+                        resultSet.getString("card_number"),
+                        sqlTimestamp,
+                        resultSet.getLong("estimated_waiting_time")
                 );
             }
         } catch (SQLException e) {
             System.out.println("Failed to find incomplete trip!");
             e.printStackTrace();
-        } catch (InvalidProtocolBufferException e) {
-            throw new RuntimeException(e);
         }
         return null;
     }
@@ -136,24 +136,23 @@ public class TripRepository implements ITripRepository{
 
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
+                java.sql.Timestamp sqlTimestamp1 = resultSet.getTimestamp("estimated_arrival_date_time");
                 Trip trip = new StandardTrip(
-                    resultSet.getLong("user_id"),
-                    TripStatus.valueOf(resultSet.getString("trip_status")),
-                    resultSet.getString("pickup_location"),
-                    resultSet.getString("destination"),
-                    resultSet.getDouble("distance"),
-                    resultSet.getDouble("fare"),
-                    resultSet.getString("card_number"),
-                    com.google.protobuf.Timestamp.parseFrom(resultSet.getBytes("estimated_arrival_date_time")),
-                    resultSet.getLong("estimated_waiting_time")
+                        resultSet.getLong("user_id"),
+                        TripStatus.valueOf(resultSet.getString("trip_status")),
+                        resultSet.getString("pickup_location"),
+                        resultSet.getString("destination"),
+                        resultSet.getDouble("distance"),
+                        resultSet.getDouble("fare"),
+                        resultSet.getString("card_number"),
+                        sqlTimestamp1,
+                        resultSet.getLong("estimated_waiting_time")
                 );
                 trips.add(trip);
             }
         } catch (SQLException e) {
             System.out.println("Failed to retrieve trips!");
             e.printStackTrace();
-        } catch (InvalidProtocolBufferException e) {
-            throw new RuntimeException(e);
         }
         return trips;
     }
