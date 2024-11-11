@@ -174,7 +174,7 @@ public class TripRepository implements ITripRepository{
         }
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(query.toString())) {
-            preparedStatement.setInt(1, userId);
+            preparedStatement.setInt(1, id);
             int index = 2;
             if (statuses != null && !statuses.isEmpty()) {
                 for (BookingStatus status : statuses) {
