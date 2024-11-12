@@ -141,7 +141,7 @@ public class TripPreviewer implements IPreviewTrip {
         response.setFare(fare);
 
         estimatedArrivalDateTime = Timestamp.newBuilder() // can use protobuf timestamp since there is no interaction with database
-                .setSeconds(System.currentTimeMillis() / 1000 + estimatedWaitingTime)
+                .setSeconds(System.currentTimeMillis() / 1000 + estimatedWaitingTime*60)
                 .build();
         response.setEstimatedArrivalDateTime(estimatedArrivalDateTime);
         response.setEstimatedWaitingTime(estimatedWaitingTime);
