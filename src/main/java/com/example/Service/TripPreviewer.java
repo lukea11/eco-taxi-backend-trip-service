@@ -120,13 +120,13 @@ public class TripPreviewer implements IPreviewTrip {
                 } else {
                     System.out.println("No taxi data available.");
                     numOfAvailableTaxis = 0;
-                    estimatedWaitingTime = 600;
+                    estimatedWaitingTime = 30;
                 }
 
             } else { // non-ok response
                 System.out.println("Error fetching taxi data: " + responseCode);
                 numOfAvailableTaxis = 0;
-                estimatedWaitingTime = 600;
+                estimatedWaitingTime = 30;
             }
 
 
