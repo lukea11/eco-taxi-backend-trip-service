@@ -170,6 +170,13 @@ public class TripPreviewer implements IPreviewTrip {
         if (results.length > 0) {
             return results[0].geometry.location;
         }
+        else {
+            // Retry with "Singapore" added if the first attempt failed
+            results = GeocodingApi.geocode(geoApiContext, address + ", Singapore").await();
+            if (results.length > 0) {
+                return results[0].geometry.location;
+            }
+        }
         throw new IllegalArgumentException("Address not found: " + address);
     }
 
