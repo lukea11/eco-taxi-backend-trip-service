@@ -110,8 +110,13 @@ public class TripPreviewer implements IPreviewTrip {
                             nearestTaxi = taxiLocation;
                         }
                     }
+                    if (numOfAvailableTaxis == 0) {
+                        nearestTaxiCoordinates[0] = -1;
+                        nearestTaxiCoordinates[1] = -1;
+                        fare = 0.0;
+                    }
 
-                    if (nearestTaxi != null) {
+                    else if (nearestTaxi != null) {
                         nearestTaxiCoordinates[0] = nearestTaxi.lat;
                         nearestTaxiCoordinates[1] = nearestTaxi.lng;
                     }
@@ -140,9 +145,15 @@ public class TripPreviewer implements IPreviewTrip {
         response.setDistance(distance);
         response.setFare(fare);
 
-        estimatedArrivalDateTime = Timestamp.newBuilder() // can use protobuf timestamp since there is no interaction with database
-                .setSeconds(System.currentTimeMillis() / 1000 + estimatedWaitingTime*60)
-                .build();
+        if (numOfAvailableTaxis == 0) {
+            estimatedArrivalDateTime = Timestamp.newBuilder()
+                    .setSeconds(System.currentTimeMillis() / 1000 + 10 * 60 * 60) // plus 10 hours
+                    .build();
+        } else {
+            estimatedArrivalDateTime = Timestamp.newBuilder() // can use protobuf timestamp since there is no interaction with database
+                    .setSeconds(System.currentTimeMillis() / 1000 + estimatedWaitingTime * 60)
+                    .build();
+        }
         response.setEstimatedArrivalDateTime(estimatedArrivalDateTime);
         response.setEstimatedWaitingTime(estimatedWaitingTime);
         response.setNumOfAvailableTaxis(numOfAvailableTaxis);
@@ -183,7 +194,7 @@ public class TripPreviewer implements IPreviewTrip {
         double multiplier; // Base multiplier
 
         if (taxiCount == 0) {
-            multiplier = 1.0;
+            multiplier = -10.0; // -1 waiting time when there are no taxis
         } else if (taxiCount <= 5) {
             multiplier = 1.5; // Fewer taxis, longer wait
         } else if (taxiCount <= 10) {
