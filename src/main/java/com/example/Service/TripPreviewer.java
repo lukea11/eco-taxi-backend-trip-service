@@ -29,6 +29,8 @@ import com.google.maps.model.DistanceMatrix;
 import com.google.maps.model.DistanceMatrixElement;
 import com.google.maps.model.TravelMode;
 
+import static java.lang.Math.ceil;
+
 @Service
 public class TripPreviewer implements IPreviewTrip {
     private final GeoApiContext geoApiContext;
@@ -177,11 +179,11 @@ public class TripPreviewer implements IPreviewTrip {
 
 
     private int calculateWaitingTime(int taxiCount) {
-        int baseWaitingTime = 600; // 10 minutes (in seconds)
-        double multiplier = 1.0; // Base multiplier
+        int baseWaitingTime = 10; // Mex 10 minutes waiting time
+        double multiplier; // Base multiplier
 
-        if (taxiCount <= 0) {
-            multiplier = 1.0; // No taxis available, set a long waiting time
+        if (taxiCount == 0) {
+            multiplier = 1.0;
         } else if (taxiCount <= 5) {
             multiplier = 1.5; // Fewer taxis, longer wait
         } else if (taxiCount <= 10) {
@@ -191,8 +193,7 @@ public class TripPreviewer implements IPreviewTrip {
         }
 
         // Calculate the estimated waiting time
-        int waitingTime = (int) (baseWaitingTime / multiplier);
-        return waitingTime;
+        return (int) ceil(baseWaitingTime / multiplier);
     }
 
 }

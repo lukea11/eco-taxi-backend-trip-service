@@ -38,7 +38,9 @@ public class TripsViewer implements IViewTrips {
                 .build();
 
         if (bookingHistory.isEmpty()){
-            responseObserver.onError(Status.NOT_FOUND.withDescription("No Trips Found").withCause(new TripNotFoundException("ensure correct filters provided in request or make a new Trip")).asException());
+            responseObserver.onError(Status.NOT_FOUND.withDescription("No Trips Found")
+                    .withCause(new TripNotFoundException("ensure correct filters provided in request or make a new Trip"))
+                    .asException());
         }
 
         else{
