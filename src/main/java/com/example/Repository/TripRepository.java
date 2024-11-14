@@ -29,6 +29,7 @@ public class TripRepository implements ITripRepository{
     public TripRepository(DataSource dataSource) {
         this.dataSource = dataSource;
     }
+
     @Override
     public Trip findIncompletedTrip(int userId) {
         String query = "SELECT * FROM trips WHERE user_id = ? AND trip_status = 'incomplete' LIMIT 1";
@@ -157,6 +158,7 @@ public class TripRepository implements ITripRepository{
         }
         return trips;
     }
+
 
     @Override
     public int getTotalPages(int limit, int userId, List<BookingStatus> statuses) {
