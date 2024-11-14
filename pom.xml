@@ -44,34 +44,19 @@
             <version>10.1.31</version> <!-- Ensure this version is correct for your Spring Boot version -->
         </dependency>
         <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.18.1</version> <!-- Replace with the latest stable version -->
+        </dependency>
+        <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20210307</version>
-        </dependency>
-        <dependency>
-            <groupId>io.grpc</groupId>
-            <artifactId>grpc-netty-shaded</artifactId>
-            <version>${grpc.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.grpc</groupId>
-            <artifactId>grpc-protobuf</artifactId>
-            <version>${grpc.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.grpc</groupId>
-            <artifactId>grpc-stub</artifactId>
-            <version>${grpc.version}</version>
+            <version>20240303</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.25</version> <!-- Check for the latest version -->
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <version>8.0.33</version> <!-- Check for the latest version -->
         </dependency>
         <dependency>
             <groupId>com.google.maps</groupId>
@@ -88,7 +73,11 @@
             <artifactId>java-dotenv</artifactId>
             <version>5.2.2</version>
         </dependency>
-
+        <dependency>
+            <groupId>io.github.lognet</groupId>
+            <artifactId>grpc-spring-boot-starter</artifactId>
+            <version>5.1.5</version>
+        </dependency>
     </dependencies>
 
     <build>

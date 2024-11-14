@@ -14,7 +14,7 @@ public class TripServiceApplication {
         SpringApplication.run(TripServiceApplication.class, args);
 
         // Start the gRPC server
-        Server server = ServerBuilder.forPort(5003).addService(new TripService()).build();
+        /* Server server = ServerBuilder.forPort(5003).addService(new TripService()).build();
 
         try {
             server.start();
@@ -24,6 +24,8 @@ public class TripServiceApplication {
         }
 
         server.awaitTermination();
+
+         */
     }
 
 }
