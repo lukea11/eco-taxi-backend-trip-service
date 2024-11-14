@@ -83,7 +83,17 @@
             <artifactId>java-dotenv</artifactId>
             <version>5.2.2</version>
         </dependency>
-
+        <dependency>
+            <groupId>net.devh</groupId>
+            <artifactId>grpc-spring-boot-starter</artifactId>
+            <version>3.1.0.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.grpc</groupId>
+                    <artifactId>grpc-netty-shaded</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 
     <build>
@@ -91,18 +101,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.example.TripServiceApplication</mainClass> <!-- Replace with your actual main class path -->
+                    <mainClass>com.example.TripServiceApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.xolstice.maven.plugins</groupId>
                 <artifactId>protobuf-maven-plugin</artifactId>
-                <version>0.6.1</version>
+                <version>0.6.1</version> <!-- Updated version -->
                 <executions>
                     <execution>
                         <goals>
@@ -122,11 +128,6 @@
                     <protoSourceRoot>src/main/resources</protoSourceRoot> <!-- Where your proto file is -->
                     <outputDirectory>src/main/java/proto</outputDirectory> <!-- Output directory -->
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>kr.motd.maven</groupId>
-                <artifactId>os-maven-plugin</artifactId>
-                <version>1.6.2</version>
             </plugin>
         </plugins>
     </build>
