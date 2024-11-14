@@ -6,19 +6,19 @@ package proto.grpc;
 public final class Trip {
   private Trip() {}
   public static void registerAllExtensions(
-          com.google.protobuf.ExtensionRegistryLite registry) {
+      com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
   public static void registerAllExtensions(
-          com.google.protobuf.ExtensionRegistry registry) {
+      com.google.protobuf.ExtensionRegistry registry) {
     registerAllExtensions(
-            (com.google.protobuf.ExtensionRegistryLite) registry);
+        (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
    * Protobuf enum {@code TripService.grpc.BookingStatus}
    */
   public enum BookingStatus
-          implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <pre>
      * The booking has been confirmed but not completed
@@ -75,7 +75,7 @@ public final class Trip {
     public final int getNumber() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
-                "Can't get the number of an unknown enum value.");
+            "Can't get the number of an unknown enum value.");
       }
       return value;
     }
@@ -104,41 +104,41 @@ public final class Trip {
     }
 
     public static com.google.protobuf.Internal.EnumLiteMap<BookingStatus>
-    internalGetValueMap() {
+        internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-            BookingStatus> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<BookingStatus>() {
-              public BookingStatus findValueByNumber(int number) {
-                return BookingStatus.forNumber(number);
-              }
-            };
+        BookingStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<BookingStatus>() {
+            public BookingStatus findValueByNumber(int number) {
+              return BookingStatus.forNumber(number);
+            }
+          };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
-    getValueDescriptor() {
+        getValueDescriptor() {
       if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalStateException(
-                "Can't get the descriptor of an unrecognized enum value.");
+            "Can't get the descriptor of an unrecognized enum value.");
       }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
-    getDescriptorForType() {
+        getDescriptorForType() {
       return getDescriptor();
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final BookingStatus[] VALUES = values();
 
     public static BookingStatus valueOf(
-            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
-                "EnumValueDescriptor is not for this type.");
+          "EnumValueDescriptor is not for this type.");
       }
       if (desc.getIndex() == -1) {
         return UNRECOGNIZED;
@@ -156,8 +156,8 @@ public final class Trip {
   }
 
   public interface PaginationOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.Pagination)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.Pagination)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>uint64 current_page = 1;</code>
@@ -187,10 +187,10 @@ public final class Trip {
    * Protobuf type {@code TripService.grpc.Pagination}
    */
   public static final class Pagination extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.Pagination)
-          PaginationOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.Pagination)
+      PaginationOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use Pagination.newBuilder() to construct.
     private Pagination(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -201,7 +201,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new Pagination();
     }
 
@@ -211,15 +211,15 @@ public final class Trip {
       return this.unknownFields;
     }
     private Pagination(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -250,7 +250,7 @@ public final class Trip {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -263,23 +263,23 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_Pagination_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_Pagination_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.Pagination.class, proto.grpc.Trip.Pagination.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.Pagination.class, proto.grpc.Trip.Pagination.Builder.class);
     }
 
     public static final int CURRENT_PAGE_FIELD_NUMBER = 1;
@@ -339,7 +339,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (currentPage_ != 0L) {
         output.writeUInt64(1, currentPage_);
       }
@@ -363,19 +363,19 @@ public final class Trip {
       size = 0;
       if (currentPage_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(1, currentPage_);
+          .computeUInt64Size(1, currentPage_);
       }
       if (prevPage_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(2, prevPage_);
+          .computeUInt64Size(2, prevPage_);
       }
       if (nextPage_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(3, nextPage_);
+          .computeUInt64Size(3, nextPage_);
       }
       if (totalPage_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(4, totalPage_);
+          .computeUInt64Size(4, totalPage_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -385,7 +385,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.Pagination)) {
         return super.equals(obj);
@@ -393,13 +393,13 @@ public final class Trip {
       proto.grpc.Trip.Pagination other = (proto.grpc.Trip.Pagination) obj;
 
       if (getCurrentPage()
-              != other.getCurrentPage()) return false;
+          != other.getCurrentPage()) return false;
       if (getPrevPage()
-              != other.getPrevPage()) return false;
+          != other.getPrevPage()) return false;
       if (getNextPage()
-              != other.getNextPage()) return false;
+          != other.getNextPage()) return false;
       if (getTotalPage()
-              != other.getTotalPage()) return false;
+          != other.getTotalPage()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -413,89 +413,89 @@ public final class Trip {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CURRENT_PAGE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getCurrentPage());
+          getCurrentPage());
       hash = (37 * hash) + PREV_PAGE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getPrevPage());
+          getPrevPage());
       hash = (37 * hash) + NEXT_PAGE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getNextPage());
+          getNextPage());
       hash = (37 * hash) + TOTAL_PAGE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getTotalPage());
+          getTotalPage());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
     public static proto.grpc.Trip.Pagination parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.Pagination parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.Pagination parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.Pagination parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.Pagination parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.Pagination parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.Pagination parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.Pagination parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.Pagination parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.Pagination parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.Pagination parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.Pagination parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -509,12 +509,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -522,20 +522,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.Pagination}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.Pagination)
-            proto.grpc.Trip.PaginationOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.Pagination)
+        proto.grpc.Trip.PaginationOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_Pagination_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_Pagination_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.Pagination.class, proto.grpc.Trip.Pagination.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.Pagination.class, proto.grpc.Trip.Pagination.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.Pagination.newBuilder()
@@ -544,7 +544,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -569,7 +569,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_Pagination_descriptor;
       }
 
@@ -604,30 +604,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -666,9 +666,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.Pagination parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -698,7 +698,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setCurrentPage(long value) {
-
+        
         currentPage_ = value;
         onChanged();
         return this;
@@ -708,7 +708,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearCurrentPage() {
-
+        
         currentPage_ = 0L;
         onChanged();
         return this;
@@ -729,7 +729,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPrevPage(long value) {
-
+        
         prevPage_ = value;
         onChanged();
         return this;
@@ -739,7 +739,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearPrevPage() {
-
+        
         prevPage_ = 0L;
         onChanged();
         return this;
@@ -760,7 +760,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setNextPage(long value) {
-
+        
         nextPage_ = value;
         onChanged();
         return this;
@@ -770,7 +770,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearNextPage() {
-
+        
         nextPage_ = 0L;
         onChanged();
         return this;
@@ -791,7 +791,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setTotalPage(long value) {
-
+        
         totalPage_ = value;
         onChanged();
         return this;
@@ -801,20 +801,20 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearTotalPage() {
-
+        
         totalPage_ = 0L;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -833,12 +833,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<Pagination>
-            PARSER = new com.google.protobuf.AbstractParser<Pagination>() {
+        PARSER = new com.google.protobuf.AbstractParser<Pagination>() {
       @java.lang.Override
       public Pagination parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new Pagination(input, extensionRegistry);
       }
     };
@@ -860,8 +860,8 @@ public final class Trip {
   }
 
   public interface TripBookingOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.TripBooking)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.TripBooking)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>uint64 id = 1;</code>
@@ -879,7 +879,7 @@ public final class Trip {
      * @return The bytes for pickup.
      */
     com.google.protobuf.ByteString
-    getPickupBytes();
+        getPickupBytes();
 
     /**
      * <code>string destination = 3;</code>
@@ -891,7 +891,7 @@ public final class Trip {
      * @return The bytes for destination.
      */
     com.google.protobuf.ByteString
-    getDestinationBytes();
+        getDestinationBytes();
 
     /**
      * <code>double distance = 4;</code>
@@ -915,7 +915,7 @@ public final class Trip {
      * @return The bytes for cardNumber.
      */
     com.google.protobuf.ByteString
-    getCardNumberBytes();
+        getCardNumberBytes();
 
     /**
      * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 7;</code>
@@ -959,10 +959,10 @@ public final class Trip {
    * Protobuf type {@code TripService.grpc.TripBooking}
    */
   public static final class TripBooking extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.TripBooking)
-          TripBookingOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.TripBooking)
+      TripBookingOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use TripBooking.newBuilder() to construct.
     private TripBooking(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -977,7 +977,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new TripBooking();
     }
 
@@ -987,15 +987,15 @@ public final class Trip {
       return this.unknownFields;
     }
     private TripBooking(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1068,7 +1068,7 @@ public final class Trip {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -1081,23 +1081,23 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_TripBooking_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_TripBooking_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.TripBooking.class, proto.grpc.Trip.TripBooking.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.TripBooking.class, proto.grpc.Trip.TripBooking.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -1123,8 +1123,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pickup_ = s;
         return s;
@@ -1136,12 +1136,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getPickupBytes() {
+        getPickupBytes() {
       java.lang.Object ref = pickup_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         pickup_ = b;
         return b;
       } else {
@@ -1161,8 +1161,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         destination_ = s;
         return s;
@@ -1174,12 +1174,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getDestinationBytes() {
+        getDestinationBytes() {
       java.lang.Object ref = destination_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         destination_ = b;
         return b;
       } else {
@@ -1221,8 +1221,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         cardNumber_ = s;
         return s;
@@ -1234,12 +1234,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getCardNumberBytes() {
+        getCardNumberBytes() {
       java.lang.Object ref = cardNumber_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         cardNumber_ = b;
         return b;
       } else {
@@ -1327,7 +1327,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (id_ != 0L) {
         output.writeUInt64(1, id_);
       }
@@ -1369,7 +1369,7 @@ public final class Trip {
       size = 0;
       if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(1, id_);
+          .computeUInt64Size(1, id_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pickup_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pickup_);
@@ -1379,30 +1379,30 @@ public final class Trip {
       }
       if (java.lang.Double.doubleToRawLongBits(distance_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(4, distance_);
+          .computeDoubleSize(4, distance_);
       }
       if (java.lang.Double.doubleToRawLongBits(fare_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(5, fare_);
+          .computeDoubleSize(5, fare_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cardNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, cardNumber_);
       }
       if (estimatedArrivalDateTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(7, getEstimatedArrivalDateTime());
+          .computeMessageSize(7, getEstimatedArrivalDateTime());
       }
       if (estimatedWaitingTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt64Size(8, estimatedWaitingTime_);
+          .computeInt64Size(8, estimatedWaitingTime_);
       }
       if (bookingStatus_ != proto.grpc.Trip.BookingStatus.INCOMPLETED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-                .computeEnumSize(9, bookingStatus_);
+          .computeEnumSize(9, bookingStatus_);
       }
       if (userId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(10, userId_);
+          .computeUInt64Size(10, userId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1412,7 +1412,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.TripBooking)) {
         return super.equals(obj);
@@ -1420,29 +1420,29 @@ public final class Trip {
       proto.grpc.Trip.TripBooking other = (proto.grpc.Trip.TripBooking) obj;
 
       if (getId()
-              != other.getId()) return false;
+          != other.getId()) return false;
       if (!getPickup()
-              .equals(other.getPickup())) return false;
+          .equals(other.getPickup())) return false;
       if (!getDestination()
-              .equals(other.getDestination())) return false;
+          .equals(other.getDestination())) return false;
       if (java.lang.Double.doubleToLongBits(getDistance())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getDistance())) return false;
       if (java.lang.Double.doubleToLongBits(getFare())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getFare())) return false;
       if (!getCardNumber()
-              .equals(other.getCardNumber())) return false;
+          .equals(other.getCardNumber())) return false;
       if (hasEstimatedArrivalDateTime() != other.hasEstimatedArrivalDateTime()) return false;
       if (hasEstimatedArrivalDateTime()) {
         if (!getEstimatedArrivalDateTime()
-                .equals(other.getEstimatedArrivalDateTime())) return false;
+            .equals(other.getEstimatedArrivalDateTime())) return false;
       }
       if (getEstimatedWaitingTime()
-              != other.getEstimatedWaitingTime()) return false;
+          != other.getEstimatedWaitingTime()) return false;
       if (bookingStatus_ != other.bookingStatus_) return false;
       if (getUserId()
-              != other.getUserId()) return false;
+          != other.getUserId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1456,17 +1456,17 @@ public final class Trip {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getId());
+          getId());
       hash = (37 * hash) + PICKUP_FIELD_NUMBER;
       hash = (53 * hash) + getPickup().hashCode();
       hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
       hash = (53 * hash) + getDestination().hashCode();
       hash = (37 * hash) + DISTANCE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              java.lang.Double.doubleToLongBits(getDistance()));
+          java.lang.Double.doubleToLongBits(getDistance()));
       hash = (37 * hash) + FARE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              java.lang.Double.doubleToLongBits(getFare()));
+          java.lang.Double.doubleToLongBits(getFare()));
       hash = (37 * hash) + CARD_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getCardNumber().hashCode();
       if (hasEstimatedArrivalDateTime()) {
@@ -1475,85 +1475,85 @@ public final class Trip {
       }
       hash = (37 * hash) + ESTIMATED_WAITING_TIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getEstimatedWaitingTime());
+          getEstimatedWaitingTime());
       hash = (37 * hash) + BOOKING_STATUS_FIELD_NUMBER;
       hash = (53 * hash) + bookingStatus_;
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getUserId());
+          getUserId());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
     public static proto.grpc.Trip.TripBooking parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.TripBooking parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.TripBooking parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.TripBooking parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.TripBooking parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.TripBooking parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.TripBooking parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.TripBooking parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.TripBooking parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.TripBooking parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.TripBooking parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.TripBooking parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -1567,12 +1567,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1580,20 +1580,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.TripBooking}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.TripBooking)
-            proto.grpc.Trip.TripBookingOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.TripBooking)
+        proto.grpc.Trip.TripBookingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_TripBooking_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_TripBooking_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.TripBooking.class, proto.grpc.Trip.TripBooking.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.TripBooking.class, proto.grpc.Trip.TripBooking.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.TripBooking.newBuilder()
@@ -1602,7 +1602,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1643,7 +1643,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_TripBooking_descriptor;
       }
 
@@ -1688,30 +1688,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -1771,9 +1771,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.TripBooking parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -1803,7 +1803,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-
+        
         id_ = value;
         onChanged();
         return this;
@@ -1813,7 +1813,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-
+        
         id_ = 0L;
         onChanged();
         return this;
@@ -1828,7 +1828,7 @@ public final class Trip {
         java.lang.Object ref = pickup_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           pickup_ = s;
           return s;
@@ -1841,12 +1841,12 @@ public final class Trip {
        * @return The bytes for pickup.
        */
       public com.google.protobuf.ByteString
-      getPickupBytes() {
+          getPickupBytes() {
         java.lang.Object ref = pickup_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           pickup_ = b;
           return b;
         } else {
@@ -1859,11 +1859,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPickup(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         pickup_ = value;
         onChanged();
         return this;
@@ -1873,7 +1873,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearPickup() {
-
+        
         pickup_ = getDefaultInstance().getPickup();
         onChanged();
         return this;
@@ -1884,12 +1884,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPickupBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         pickup_ = value;
         onChanged();
         return this;
@@ -1904,7 +1904,7 @@ public final class Trip {
         java.lang.Object ref = destination_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           destination_ = s;
           return s;
@@ -1917,12 +1917,12 @@ public final class Trip {
        * @return The bytes for destination.
        */
       public com.google.protobuf.ByteString
-      getDestinationBytes() {
+          getDestinationBytes() {
         java.lang.Object ref = destination_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           destination_ = b;
           return b;
         } else {
@@ -1935,11 +1935,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDestination(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         destination_ = value;
         onChanged();
         return this;
@@ -1949,7 +1949,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearDestination() {
-
+        
         destination_ = getDefaultInstance().getDestination();
         onChanged();
         return this;
@@ -1960,12 +1960,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDestinationBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         destination_ = value;
         onChanged();
         return this;
@@ -1986,7 +1986,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDistance(double value) {
-
+        
         distance_ = value;
         onChanged();
         return this;
@@ -1996,7 +1996,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearDistance() {
-
+        
         distance_ = 0D;
         onChanged();
         return this;
@@ -2017,7 +2017,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setFare(double value) {
-
+        
         fare_ = value;
         onChanged();
         return this;
@@ -2027,7 +2027,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearFare() {
-
+        
         fare_ = 0D;
         onChanged();
         return this;
@@ -2042,7 +2042,7 @@ public final class Trip {
         java.lang.Object ref = cardNumber_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           cardNumber_ = s;
           return s;
@@ -2055,12 +2055,12 @@ public final class Trip {
        * @return The bytes for cardNumber.
        */
       public com.google.protobuf.ByteString
-      getCardNumberBytes() {
+          getCardNumberBytes() {
         java.lang.Object ref = cardNumber_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           cardNumber_ = b;
           return b;
         } else {
@@ -2073,11 +2073,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setCardNumber(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         cardNumber_ = value;
         onChanged();
         return this;
@@ -2087,7 +2087,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearCardNumber() {
-
+        
         cardNumber_ = getDefaultInstance().getCardNumber();
         onChanged();
         return this;
@@ -2098,12 +2098,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setCardNumberBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         cardNumber_ = value;
         onChanged();
         return this;
@@ -2111,7 +2111,7 @@ public final class Trip {
 
       private com.google.protobuf.Timestamp estimatedArrivalDateTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> estimatedArrivalDateTimeBuilder_;
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> estimatedArrivalDateTimeBuilder_;
       /**
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 7;</code>
        * @return Whether the estimatedArrivalDateTime field is set.
@@ -2150,7 +2150,7 @@ public final class Trip {
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 7;</code>
        */
       public Builder setEstimatedArrivalDateTime(
-              com.google.protobuf.Timestamp.Builder builderForValue) {
+          com.google.protobuf.Timestamp.Builder builderForValue) {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           estimatedArrivalDateTime_ = builderForValue.build();
           onChanged();
@@ -2167,7 +2167,7 @@ public final class Trip {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           if (estimatedArrivalDateTime_ != null) {
             estimatedArrivalDateTime_ =
-                    com.google.protobuf.Timestamp.newBuilder(estimatedArrivalDateTime_).mergeFrom(value).buildPartial();
+              com.google.protobuf.Timestamp.newBuilder(estimatedArrivalDateTime_).mergeFrom(value).buildPartial();
           } else {
             estimatedArrivalDateTime_ = value;
           }
@@ -2196,7 +2196,7 @@ public final class Trip {
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getEstimatedArrivalDateTimeBuilder() {
-
+        
         onChanged();
         return getEstimatedArrivalDateTimeFieldBuilder().getBuilder();
       }
@@ -2208,18 +2208,18 @@ public final class Trip {
           return estimatedArrivalDateTimeBuilder_.getMessageOrBuilder();
         } else {
           return estimatedArrivalDateTime_ == null ?
-                  com.google.protobuf.Timestamp.getDefaultInstance() : estimatedArrivalDateTime_;
+              com.google.protobuf.Timestamp.getDefaultInstance() : estimatedArrivalDateTime_;
         }
       }
       /**
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
-      getEstimatedArrivalDateTimeFieldBuilder() {
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEstimatedArrivalDateTimeFieldBuilder() {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           estimatedArrivalDateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
                   getEstimatedArrivalDateTime(),
                   getParentForChildren(),
                   isClean());
@@ -2243,7 +2243,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setEstimatedWaitingTime(long value) {
-
+        
         estimatedWaitingTime_ = value;
         onChanged();
         return this;
@@ -2253,7 +2253,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearEstimatedWaitingTime() {
-
+        
         estimatedWaitingTime_ = 0L;
         onChanged();
         return this;
@@ -2273,7 +2273,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setBookingStatusValue(int value) {
-
+        
         bookingStatus_ = value;
         onChanged();
         return this;
@@ -2297,7 +2297,7 @@ public final class Trip {
         if (value == null) {
           throw new NullPointerException();
         }
-
+        
         bookingStatus_ = value.getNumber();
         onChanged();
         return this;
@@ -2307,7 +2307,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearBookingStatus() {
-
+        
         bookingStatus_ = 0;
         onChanged();
         return this;
@@ -2328,7 +2328,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setUserId(long value) {
-
+        
         userId_ = value;
         onChanged();
         return this;
@@ -2338,20 +2338,20 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
-
+        
         userId_ = 0L;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -2370,12 +2370,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<TripBooking>
-            PARSER = new com.google.protobuf.AbstractParser<TripBooking>() {
+        PARSER = new com.google.protobuf.AbstractParser<TripBooking>() {
       @java.lang.Override
       public TripBooking parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new TripBooking(input, extensionRegistry);
       }
     };
@@ -2397,8 +2397,8 @@ public final class Trip {
   }
 
   public interface SearchTripPreviewRequestOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.SearchTripPreviewRequest)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.SearchTripPreviewRequest)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string pickup = 1;</code>
@@ -2410,7 +2410,7 @@ public final class Trip {
      * @return The bytes for pickup.
      */
     com.google.protobuf.ByteString
-    getPickupBytes();
+        getPickupBytes();
 
     /**
      * <code>string destination = 2;</code>
@@ -2422,16 +2422,16 @@ public final class Trip {
      * @return The bytes for destination.
      */
     com.google.protobuf.ByteString
-    getDestinationBytes();
+        getDestinationBytes();
   }
   /**
    * Protobuf type {@code TripService.grpc.SearchTripPreviewRequest}
    */
   public static final class SearchTripPreviewRequest extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.SearchTripPreviewRequest)
-          SearchTripPreviewRequestOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.SearchTripPreviewRequest)
+      SearchTripPreviewRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use SearchTripPreviewRequest.newBuilder() to construct.
     private SearchTripPreviewRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -2444,7 +2444,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new SearchTripPreviewRequest();
     }
 
@@ -2454,15 +2454,15 @@ public final class Trip {
       return this.unknownFields;
     }
     private SearchTripPreviewRequest(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -2485,7 +2485,7 @@ public final class Trip {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -2498,23 +2498,23 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_SearchTripPreviewRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_SearchTripPreviewRequest_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.SearchTripPreviewRequest.class, proto.grpc.Trip.SearchTripPreviewRequest.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.SearchTripPreviewRequest.class, proto.grpc.Trip.SearchTripPreviewRequest.Builder.class);
     }
 
     public static final int PICKUP_FIELD_NUMBER = 1;
@@ -2529,8 +2529,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pickup_ = s;
         return s;
@@ -2542,12 +2542,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getPickupBytes() {
+        getPickupBytes() {
       java.lang.Object ref = pickup_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         pickup_ = b;
         return b;
       } else {
@@ -2567,8 +2567,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         destination_ = s;
         return s;
@@ -2580,12 +2580,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getDestinationBytes() {
+        getDestinationBytes() {
       java.lang.Object ref = destination_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         destination_ = b;
         return b;
       } else {
@@ -2606,7 +2606,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pickup_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pickup_);
       }
@@ -2636,7 +2636,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.SearchTripPreviewRequest)) {
         return super.equals(obj);
@@ -2644,9 +2644,9 @@ public final class Trip {
       proto.grpc.Trip.SearchTripPreviewRequest other = (proto.grpc.Trip.SearchTripPreviewRequest) obj;
 
       if (!getPickup()
-              .equals(other.getPickup())) return false;
+          .equals(other.getPickup())) return false;
       if (!getDestination()
-              .equals(other.getDestination())) return false;
+          .equals(other.getDestination())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2668,73 +2668,73 @@ public final class Trip {
     }
 
     public static proto.grpc.Trip.SearchTripPreviewRequest parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.SearchTripPreviewRequest parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.SearchTripPreviewRequest parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.SearchTripPreviewRequest parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.SearchTripPreviewRequest parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.SearchTripPreviewRequest parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.SearchTripPreviewRequest parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.SearchTripPreviewRequest parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.SearchTripPreviewRequest parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.SearchTripPreviewRequest parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.SearchTripPreviewRequest parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.SearchTripPreviewRequest parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -2748,12 +2748,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2761,20 +2761,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.SearchTripPreviewRequest}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.SearchTripPreviewRequest)
-            proto.grpc.Trip.SearchTripPreviewRequestOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.SearchTripPreviewRequest)
+        proto.grpc.Trip.SearchTripPreviewRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_SearchTripPreviewRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_SearchTripPreviewRequest_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.SearchTripPreviewRequest.class, proto.grpc.Trip.SearchTripPreviewRequest.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.SearchTripPreviewRequest.class, proto.grpc.Trip.SearchTripPreviewRequest.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.SearchTripPreviewRequest.newBuilder()
@@ -2783,7 +2783,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2804,7 +2804,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_SearchTripPreviewRequest_descriptor;
       }
 
@@ -2837,30 +2837,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -2895,9 +2895,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.SearchTripPreviewRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -2921,7 +2921,7 @@ public final class Trip {
         java.lang.Object ref = pickup_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           pickup_ = s;
           return s;
@@ -2934,12 +2934,12 @@ public final class Trip {
        * @return The bytes for pickup.
        */
       public com.google.protobuf.ByteString
-      getPickupBytes() {
+          getPickupBytes() {
         java.lang.Object ref = pickup_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           pickup_ = b;
           return b;
         } else {
@@ -2952,11 +2952,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPickup(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         pickup_ = value;
         onChanged();
         return this;
@@ -2966,7 +2966,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearPickup() {
-
+        
         pickup_ = getDefaultInstance().getPickup();
         onChanged();
         return this;
@@ -2977,12 +2977,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPickupBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         pickup_ = value;
         onChanged();
         return this;
@@ -2997,7 +2997,7 @@ public final class Trip {
         java.lang.Object ref = destination_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           destination_ = s;
           return s;
@@ -3010,12 +3010,12 @@ public final class Trip {
        * @return The bytes for destination.
        */
       public com.google.protobuf.ByteString
-      getDestinationBytes() {
+          getDestinationBytes() {
         java.lang.Object ref = destination_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           destination_ = b;
           return b;
         } else {
@@ -3028,11 +3028,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDestination(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         destination_ = value;
         onChanged();
         return this;
@@ -3042,7 +3042,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearDestination() {
-
+        
         destination_ = getDefaultInstance().getDestination();
         onChanged();
         return this;
@@ -3053,25 +3053,25 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDestinationBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         destination_ = value;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -3090,12 +3090,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<SearchTripPreviewRequest>
-            PARSER = new com.google.protobuf.AbstractParser<SearchTripPreviewRequest>() {
+        PARSER = new com.google.protobuf.AbstractParser<SearchTripPreviewRequest>() {
       @java.lang.Override
       public SearchTripPreviewRequest parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new SearchTripPreviewRequest(input, extensionRegistry);
       }
     };
@@ -3117,8 +3117,8 @@ public final class Trip {
   }
 
   public interface SearchTripPreviewResponseOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.SearchTripPreviewResponse)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.SearchTripPreviewResponse)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string pickup = 1;</code>
@@ -3130,7 +3130,7 @@ public final class Trip {
      * @return The bytes for pickup.
      */
     com.google.protobuf.ByteString
-    getPickupBytes();
+        getPickupBytes();
 
     /**
      * <code>string destination = 2;</code>
@@ -3142,7 +3142,7 @@ public final class Trip {
      * @return The bytes for destination.
      */
     com.google.protobuf.ByteString
-    getDestinationBytes();
+        getDestinationBytes();
 
     /**
      * <code>double distance = 3;</code>
@@ -3204,10 +3204,10 @@ public final class Trip {
    * Protobuf type {@code TripService.grpc.SearchTripPreviewResponse}
    */
   public static final class SearchTripPreviewResponse extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.SearchTripPreviewResponse)
-          SearchTripPreviewResponseOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.SearchTripPreviewResponse)
+      SearchTripPreviewResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use SearchTripPreviewResponse.newBuilder() to construct.
     private SearchTripPreviewResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -3221,7 +3221,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new SearchTripPreviewResponse();
     }
 
@@ -3231,16 +3231,16 @@ public final class Trip {
       return this.unknownFields;
     }
     private SearchTripPreviewResponse(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3317,7 +3317,7 @@ public final class Trip {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -3330,7 +3330,7 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           nearestTaxiCoordinates_.makeImmutable(); // C
@@ -3340,16 +3340,16 @@ public final class Trip {
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_SearchTripPreviewResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_SearchTripPreviewResponse_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.SearchTripPreviewResponse.class, proto.grpc.Trip.SearchTripPreviewResponse.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.SearchTripPreviewResponse.class, proto.grpc.Trip.SearchTripPreviewResponse.Builder.class);
     }
 
     public static final int PICKUP_FIELD_NUMBER = 1;
@@ -3364,8 +3364,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pickup_ = s;
         return s;
@@ -3377,12 +3377,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getPickupBytes() {
+        getPickupBytes() {
       java.lang.Object ref = pickup_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         pickup_ = b;
         return b;
       } else {
@@ -3402,8 +3402,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         destination_ = s;
         return s;
@@ -3415,12 +3415,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getDestinationBytes() {
+        getDestinationBytes() {
       java.lang.Object ref = destination_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         destination_ = b;
         return b;
       } else {
@@ -3506,7 +3506,7 @@ public final class Trip {
      */
     @java.lang.Override
     public java.util.List<java.lang.Double>
-    getNearestTaxiCoordinatesList() {
+        getNearestTaxiCoordinatesList() {
       return nearestTaxiCoordinates_;
     }
     /**
@@ -3539,7 +3539,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       getSerializedSize();
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pickup_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pickup_);
@@ -3586,23 +3586,23 @@ public final class Trip {
       }
       if (java.lang.Double.doubleToRawLongBits(distance_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(3, distance_);
+          .computeDoubleSize(3, distance_);
       }
       if (java.lang.Double.doubleToRawLongBits(fare_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(4, fare_);
+          .computeDoubleSize(4, fare_);
       }
       if (estimatedArrivalDateTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(5, getEstimatedArrivalDateTime());
+          .computeMessageSize(5, getEstimatedArrivalDateTime());
       }
       if (estimatedWaitingTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt64Size(6, estimatedWaitingTime_);
+          .computeInt64Size(6, estimatedWaitingTime_);
       }
       if (numOfAvailableTaxis_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt64Size(7, numOfAvailableTaxis_);
+          .computeInt64Size(7, numOfAvailableTaxis_);
       }
       {
         int dataSize = 0;
@@ -3611,7 +3611,7 @@ public final class Trip {
         if (!getNearestTaxiCoordinatesList().isEmpty()) {
           size += 1;
           size += com.google.protobuf.CodedOutputStream
-                  .computeInt32SizeNoTag(dataSize);
+              .computeInt32SizeNoTag(dataSize);
         }
         nearestTaxiCoordinatesMemoizedSerializedSize = dataSize;
       }
@@ -3623,7 +3623,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.SearchTripPreviewResponse)) {
         return super.equals(obj);
@@ -3631,26 +3631,26 @@ public final class Trip {
       proto.grpc.Trip.SearchTripPreviewResponse other = (proto.grpc.Trip.SearchTripPreviewResponse) obj;
 
       if (!getPickup()
-              .equals(other.getPickup())) return false;
+          .equals(other.getPickup())) return false;
       if (!getDestination()
-              .equals(other.getDestination())) return false;
+          .equals(other.getDestination())) return false;
       if (java.lang.Double.doubleToLongBits(getDistance())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getDistance())) return false;
       if (java.lang.Double.doubleToLongBits(getFare())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getFare())) return false;
       if (hasEstimatedArrivalDateTime() != other.hasEstimatedArrivalDateTime()) return false;
       if (hasEstimatedArrivalDateTime()) {
         if (!getEstimatedArrivalDateTime()
-                .equals(other.getEstimatedArrivalDateTime())) return false;
+            .equals(other.getEstimatedArrivalDateTime())) return false;
       }
       if (getEstimatedWaitingTime()
-              != other.getEstimatedWaitingTime()) return false;
+          != other.getEstimatedWaitingTime()) return false;
       if (getNumOfAvailableTaxis()
-              != other.getNumOfAvailableTaxis()) return false;
+          != other.getNumOfAvailableTaxis()) return false;
       if (!getNearestTaxiCoordinatesList()
-              .equals(other.getNearestTaxiCoordinatesList())) return false;
+          .equals(other.getNearestTaxiCoordinatesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3668,20 +3668,20 @@ public final class Trip {
       hash = (53 * hash) + getDestination().hashCode();
       hash = (37 * hash) + DISTANCE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              java.lang.Double.doubleToLongBits(getDistance()));
+          java.lang.Double.doubleToLongBits(getDistance()));
       hash = (37 * hash) + FARE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              java.lang.Double.doubleToLongBits(getFare()));
+          java.lang.Double.doubleToLongBits(getFare()));
       if (hasEstimatedArrivalDateTime()) {
         hash = (37 * hash) + ESTIMATED_ARRIVAL_DATE_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getEstimatedArrivalDateTime().hashCode();
       }
       hash = (37 * hash) + ESTIMATED_WAITING_TIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getEstimatedWaitingTime());
+          getEstimatedWaitingTime());
       hash = (37 * hash) + NUM_OF_AVAILABLE_TAXIS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getNumOfAvailableTaxis());
+          getNumOfAvailableTaxis());
       if (getNearestTaxiCoordinatesCount() > 0) {
         hash = (37 * hash) + NEAREST_TAXI_COORDINATES_FIELD_NUMBER;
         hash = (53 * hash) + getNearestTaxiCoordinatesList().hashCode();
@@ -3692,73 +3692,73 @@ public final class Trip {
     }
 
     public static proto.grpc.Trip.SearchTripPreviewResponse parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.SearchTripPreviewResponse parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.SearchTripPreviewResponse parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.SearchTripPreviewResponse parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.SearchTripPreviewResponse parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.SearchTripPreviewResponse parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.SearchTripPreviewResponse parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.SearchTripPreviewResponse parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.SearchTripPreviewResponse parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.SearchTripPreviewResponse parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.SearchTripPreviewResponse parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.SearchTripPreviewResponse parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -3772,12 +3772,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3785,20 +3785,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.SearchTripPreviewResponse}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.SearchTripPreviewResponse)
-            proto.grpc.Trip.SearchTripPreviewResponseOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.SearchTripPreviewResponse)
+        proto.grpc.Trip.SearchTripPreviewResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_SearchTripPreviewResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_SearchTripPreviewResponse_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.SearchTripPreviewResponse.class, proto.grpc.Trip.SearchTripPreviewResponse.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.SearchTripPreviewResponse.class, proto.grpc.Trip.SearchTripPreviewResponse.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.SearchTripPreviewResponse.newBuilder()
@@ -3807,7 +3807,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3844,7 +3844,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_SearchTripPreviewResponse_descriptor;
       }
 
@@ -3892,30 +3892,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -3975,9 +3975,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.SearchTripPreviewResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -4002,7 +4002,7 @@ public final class Trip {
         java.lang.Object ref = pickup_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           pickup_ = s;
           return s;
@@ -4015,12 +4015,12 @@ public final class Trip {
        * @return The bytes for pickup.
        */
       public com.google.protobuf.ByteString
-      getPickupBytes() {
+          getPickupBytes() {
         java.lang.Object ref = pickup_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           pickup_ = b;
           return b;
         } else {
@@ -4033,11 +4033,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPickup(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         pickup_ = value;
         onChanged();
         return this;
@@ -4047,7 +4047,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearPickup() {
-
+        
         pickup_ = getDefaultInstance().getPickup();
         onChanged();
         return this;
@@ -4058,12 +4058,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPickupBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         pickup_ = value;
         onChanged();
         return this;
@@ -4078,7 +4078,7 @@ public final class Trip {
         java.lang.Object ref = destination_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           destination_ = s;
           return s;
@@ -4091,12 +4091,12 @@ public final class Trip {
        * @return The bytes for destination.
        */
       public com.google.protobuf.ByteString
-      getDestinationBytes() {
+          getDestinationBytes() {
         java.lang.Object ref = destination_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           destination_ = b;
           return b;
         } else {
@@ -4109,11 +4109,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDestination(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         destination_ = value;
         onChanged();
         return this;
@@ -4123,7 +4123,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearDestination() {
-
+        
         destination_ = getDefaultInstance().getDestination();
         onChanged();
         return this;
@@ -4134,12 +4134,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDestinationBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         destination_ = value;
         onChanged();
         return this;
@@ -4160,7 +4160,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDistance(double value) {
-
+        
         distance_ = value;
         onChanged();
         return this;
@@ -4170,7 +4170,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearDistance() {
-
+        
         distance_ = 0D;
         onChanged();
         return this;
@@ -4191,7 +4191,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setFare(double value) {
-
+        
         fare_ = value;
         onChanged();
         return this;
@@ -4201,7 +4201,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearFare() {
-
+        
         fare_ = 0D;
         onChanged();
         return this;
@@ -4209,7 +4209,7 @@ public final class Trip {
 
       private com.google.protobuf.Timestamp estimatedArrivalDateTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> estimatedArrivalDateTimeBuilder_;
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> estimatedArrivalDateTimeBuilder_;
       /**
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 5;</code>
        * @return Whether the estimatedArrivalDateTime field is set.
@@ -4248,7 +4248,7 @@ public final class Trip {
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 5;</code>
        */
       public Builder setEstimatedArrivalDateTime(
-              com.google.protobuf.Timestamp.Builder builderForValue) {
+          com.google.protobuf.Timestamp.Builder builderForValue) {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           estimatedArrivalDateTime_ = builderForValue.build();
           onChanged();
@@ -4265,7 +4265,7 @@ public final class Trip {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           if (estimatedArrivalDateTime_ != null) {
             estimatedArrivalDateTime_ =
-                    com.google.protobuf.Timestamp.newBuilder(estimatedArrivalDateTime_).mergeFrom(value).buildPartial();
+              com.google.protobuf.Timestamp.newBuilder(estimatedArrivalDateTime_).mergeFrom(value).buildPartial();
           } else {
             estimatedArrivalDateTime_ = value;
           }
@@ -4294,7 +4294,7 @@ public final class Trip {
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getEstimatedArrivalDateTimeBuilder() {
-
+        
         onChanged();
         return getEstimatedArrivalDateTimeFieldBuilder().getBuilder();
       }
@@ -4306,18 +4306,18 @@ public final class Trip {
           return estimatedArrivalDateTimeBuilder_.getMessageOrBuilder();
         } else {
           return estimatedArrivalDateTime_ == null ?
-                  com.google.protobuf.Timestamp.getDefaultInstance() : estimatedArrivalDateTime_;
+              com.google.protobuf.Timestamp.getDefaultInstance() : estimatedArrivalDateTime_;
         }
       }
       /**
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
-      getEstimatedArrivalDateTimeFieldBuilder() {
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEstimatedArrivalDateTimeFieldBuilder() {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           estimatedArrivalDateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
                   getEstimatedArrivalDateTime(),
                   getParentForChildren(),
                   isClean());
@@ -4341,7 +4341,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setEstimatedWaitingTime(long value) {
-
+        
         estimatedWaitingTime_ = value;
         onChanged();
         return this;
@@ -4351,7 +4351,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearEstimatedWaitingTime() {
-
+        
         estimatedWaitingTime_ = 0L;
         onChanged();
         return this;
@@ -4372,7 +4372,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setNumOfAvailableTaxis(long value) {
-
+        
         numOfAvailableTaxis_ = value;
         onChanged();
         return this;
@@ -4382,7 +4382,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearNumOfAvailableTaxis() {
-
+        
         numOfAvailableTaxis_ = 0L;
         onChanged();
         return this;
@@ -4393,16 +4393,16 @@ public final class Trip {
         if (!((bitField0_ & 0x00000001) != 0)) {
           nearestTaxiCoordinates_ = mutableCopy(nearestTaxiCoordinates_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
       /**
        * <code>repeated double nearest_taxi_coordinates = 8;</code>
        * @return A list containing the nearestTaxiCoordinates.
        */
       public java.util.List<java.lang.Double>
-      getNearestTaxiCoordinatesList() {
+          getNearestTaxiCoordinatesList() {
         return ((bitField0_ & 0x00000001) != 0) ?
-                java.util.Collections.unmodifiableList(nearestTaxiCoordinates_) : nearestTaxiCoordinates_;
+                 java.util.Collections.unmodifiableList(nearestTaxiCoordinates_) : nearestTaxiCoordinates_;
       }
       /**
        * <code>repeated double nearest_taxi_coordinates = 8;</code>
@@ -4426,7 +4426,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setNearestTaxiCoordinates(
-              int index, double value) {
+          int index, double value) {
         ensureNearestTaxiCoordinatesIsMutable();
         nearestTaxiCoordinates_.setDouble(index, value);
         onChanged();
@@ -4449,10 +4449,10 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder addAllNearestTaxiCoordinates(
-              java.lang.Iterable<? extends java.lang.Double> values) {
+          java.lang.Iterable<? extends java.lang.Double> values) {
         ensureNearestTaxiCoordinatesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                values, nearestTaxiCoordinates_);
+            values, nearestTaxiCoordinates_);
         onChanged();
         return this;
       }
@@ -4468,13 +4468,13 @@ public final class Trip {
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -4493,12 +4493,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<SearchTripPreviewResponse>
-            PARSER = new com.google.protobuf.AbstractParser<SearchTripPreviewResponse>() {
+        PARSER = new com.google.protobuf.AbstractParser<SearchTripPreviewResponse>() {
       @java.lang.Override
       public SearchTripPreviewResponse parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new SearchTripPreviewResponse(input, extensionRegistry);
       }
     };
@@ -4520,8 +4520,8 @@ public final class Trip {
   }
 
   public interface ConfirmBookingRequestOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.ConfirmBookingRequest)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.ConfirmBookingRequest)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string pickup = 1;</code>
@@ -4533,7 +4533,7 @@ public final class Trip {
      * @return The bytes for pickup.
      */
     com.google.protobuf.ByteString
-    getPickupBytes();
+        getPickupBytes();
 
     /**
      * <code>string destination = 2;</code>
@@ -4545,7 +4545,7 @@ public final class Trip {
      * @return The bytes for destination.
      */
     com.google.protobuf.ByteString
-    getDestinationBytes();
+        getDestinationBytes();
 
     /**
      * <code>double distance = 3;</code>
@@ -4569,7 +4569,7 @@ public final class Trip {
      * @return The bytes for cardNumber.
      */
     com.google.protobuf.ByteString
-    getCardNumberBytes();
+        getCardNumberBytes();
 
     /**
      * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 6;</code>
@@ -4613,10 +4613,10 @@ public final class Trip {
    * Protobuf type {@code TripService.grpc.ConfirmBookingRequest}
    */
   public static final class ConfirmBookingRequest extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.ConfirmBookingRequest)
-          ConfirmBookingRequestOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.ConfirmBookingRequest)
+      ConfirmBookingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ConfirmBookingRequest.newBuilder() to construct.
     private ConfirmBookingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -4631,7 +4631,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new ConfirmBookingRequest();
     }
 
@@ -4641,15 +4641,15 @@ public final class Trip {
       return this.unknownFields;
     }
     private ConfirmBookingRequest(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4717,7 +4717,7 @@ public final class Trip {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -4730,23 +4730,23 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_ConfirmBookingRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_ConfirmBookingRequest_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.ConfirmBookingRequest.class, proto.grpc.Trip.ConfirmBookingRequest.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.ConfirmBookingRequest.class, proto.grpc.Trip.ConfirmBookingRequest.Builder.class);
     }
 
     public static final int PICKUP_FIELD_NUMBER = 1;
@@ -4761,8 +4761,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pickup_ = s;
         return s;
@@ -4774,12 +4774,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getPickupBytes() {
+        getPickupBytes() {
       java.lang.Object ref = pickup_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         pickup_ = b;
         return b;
       } else {
@@ -4799,8 +4799,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         destination_ = s;
         return s;
@@ -4812,12 +4812,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getDestinationBytes() {
+        getDestinationBytes() {
       java.lang.Object ref = destination_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         destination_ = b;
         return b;
       } else {
@@ -4859,8 +4859,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         cardNumber_ = s;
         return s;
@@ -4872,12 +4872,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getCardNumberBytes() {
+        getCardNumberBytes() {
       java.lang.Object ref = cardNumber_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         cardNumber_ = b;
         return b;
       } else {
@@ -4965,7 +4965,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pickup_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pickup_);
       }
@@ -5010,30 +5010,30 @@ public final class Trip {
       }
       if (java.lang.Double.doubleToRawLongBits(distance_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(3, distance_);
+          .computeDoubleSize(3, distance_);
       }
       if (java.lang.Double.doubleToRawLongBits(fare_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(4, fare_);
+          .computeDoubleSize(4, fare_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cardNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, cardNumber_);
       }
       if (estimatedArrivalDateTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(6, getEstimatedArrivalDateTime());
+          .computeMessageSize(6, getEstimatedArrivalDateTime());
       }
       if (estimatedWaitingTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt64Size(7, estimatedWaitingTime_);
+          .computeInt64Size(7, estimatedWaitingTime_);
       }
       if (bookingStatus_ != proto.grpc.Trip.BookingStatus.INCOMPLETED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-                .computeEnumSize(8, bookingStatus_);
+          .computeEnumSize(8, bookingStatus_);
       }
       if (userId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(9, userId_);
+          .computeUInt64Size(9, userId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5043,7 +5043,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.ConfirmBookingRequest)) {
         return super.equals(obj);
@@ -5051,27 +5051,27 @@ public final class Trip {
       proto.grpc.Trip.ConfirmBookingRequest other = (proto.grpc.Trip.ConfirmBookingRequest) obj;
 
       if (!getPickup()
-              .equals(other.getPickup())) return false;
+          .equals(other.getPickup())) return false;
       if (!getDestination()
-              .equals(other.getDestination())) return false;
+          .equals(other.getDestination())) return false;
       if (java.lang.Double.doubleToLongBits(getDistance())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getDistance())) return false;
       if (java.lang.Double.doubleToLongBits(getFare())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getFare())) return false;
       if (!getCardNumber()
-              .equals(other.getCardNumber())) return false;
+          .equals(other.getCardNumber())) return false;
       if (hasEstimatedArrivalDateTime() != other.hasEstimatedArrivalDateTime()) return false;
       if (hasEstimatedArrivalDateTime()) {
         if (!getEstimatedArrivalDateTime()
-                .equals(other.getEstimatedArrivalDateTime())) return false;
+            .equals(other.getEstimatedArrivalDateTime())) return false;
       }
       if (getEstimatedWaitingTime()
-              != other.getEstimatedWaitingTime()) return false;
+          != other.getEstimatedWaitingTime()) return false;
       if (bookingStatus_ != other.bookingStatus_) return false;
       if (getUserId()
-              != other.getUserId()) return false;
+          != other.getUserId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5089,10 +5089,10 @@ public final class Trip {
       hash = (53 * hash) + getDestination().hashCode();
       hash = (37 * hash) + DISTANCE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              java.lang.Double.doubleToLongBits(getDistance()));
+          java.lang.Double.doubleToLongBits(getDistance()));
       hash = (37 * hash) + FARE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              java.lang.Double.doubleToLongBits(getFare()));
+          java.lang.Double.doubleToLongBits(getFare()));
       hash = (37 * hash) + CARD_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getCardNumber().hashCode();
       if (hasEstimatedArrivalDateTime()) {
@@ -5101,85 +5101,85 @@ public final class Trip {
       }
       hash = (37 * hash) + ESTIMATED_WAITING_TIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getEstimatedWaitingTime());
+          getEstimatedWaitingTime());
       hash = (37 * hash) + BOOKING_STATUS_FIELD_NUMBER;
       hash = (53 * hash) + bookingStatus_;
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getUserId());
+          getUserId());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
     public static proto.grpc.Trip.ConfirmBookingRequest parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.ConfirmBookingRequest parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.ConfirmBookingRequest parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.ConfirmBookingRequest parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.ConfirmBookingRequest parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.ConfirmBookingRequest parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.ConfirmBookingRequest parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.ConfirmBookingRequest parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.ConfirmBookingRequest parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.ConfirmBookingRequest parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.ConfirmBookingRequest parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.ConfirmBookingRequest parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -5193,12 +5193,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5206,20 +5206,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.ConfirmBookingRequest}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.ConfirmBookingRequest)
-            proto.grpc.Trip.ConfirmBookingRequestOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.ConfirmBookingRequest)
+        proto.grpc.Trip.ConfirmBookingRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_ConfirmBookingRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_ConfirmBookingRequest_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.ConfirmBookingRequest.class, proto.grpc.Trip.ConfirmBookingRequest.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.ConfirmBookingRequest.class, proto.grpc.Trip.ConfirmBookingRequest.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.ConfirmBookingRequest.newBuilder()
@@ -5228,7 +5228,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -5267,7 +5267,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_ConfirmBookingRequest_descriptor;
       }
 
@@ -5311,30 +5311,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -5391,9 +5391,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.ConfirmBookingRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -5417,7 +5417,7 @@ public final class Trip {
         java.lang.Object ref = pickup_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           pickup_ = s;
           return s;
@@ -5430,12 +5430,12 @@ public final class Trip {
        * @return The bytes for pickup.
        */
       public com.google.protobuf.ByteString
-      getPickupBytes() {
+          getPickupBytes() {
         java.lang.Object ref = pickup_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           pickup_ = b;
           return b;
         } else {
@@ -5448,11 +5448,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPickup(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         pickup_ = value;
         onChanged();
         return this;
@@ -5462,7 +5462,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearPickup() {
-
+        
         pickup_ = getDefaultInstance().getPickup();
         onChanged();
         return this;
@@ -5473,12 +5473,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPickupBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         pickup_ = value;
         onChanged();
         return this;
@@ -5493,7 +5493,7 @@ public final class Trip {
         java.lang.Object ref = destination_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           destination_ = s;
           return s;
@@ -5506,12 +5506,12 @@ public final class Trip {
        * @return The bytes for destination.
        */
       public com.google.protobuf.ByteString
-      getDestinationBytes() {
+          getDestinationBytes() {
         java.lang.Object ref = destination_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           destination_ = b;
           return b;
         } else {
@@ -5524,11 +5524,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDestination(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         destination_ = value;
         onChanged();
         return this;
@@ -5538,7 +5538,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearDestination() {
-
+        
         destination_ = getDefaultInstance().getDestination();
         onChanged();
         return this;
@@ -5549,12 +5549,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDestinationBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         destination_ = value;
         onChanged();
         return this;
@@ -5575,7 +5575,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDistance(double value) {
-
+        
         distance_ = value;
         onChanged();
         return this;
@@ -5585,7 +5585,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearDistance() {
-
+        
         distance_ = 0D;
         onChanged();
         return this;
@@ -5606,7 +5606,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setFare(double value) {
-
+        
         fare_ = value;
         onChanged();
         return this;
@@ -5616,7 +5616,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearFare() {
-
+        
         fare_ = 0D;
         onChanged();
         return this;
@@ -5631,7 +5631,7 @@ public final class Trip {
         java.lang.Object ref = cardNumber_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           cardNumber_ = s;
           return s;
@@ -5644,12 +5644,12 @@ public final class Trip {
        * @return The bytes for cardNumber.
        */
       public com.google.protobuf.ByteString
-      getCardNumberBytes() {
+          getCardNumberBytes() {
         java.lang.Object ref = cardNumber_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           cardNumber_ = b;
           return b;
         } else {
@@ -5662,11 +5662,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setCardNumber(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         cardNumber_ = value;
         onChanged();
         return this;
@@ -5676,7 +5676,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearCardNumber() {
-
+        
         cardNumber_ = getDefaultInstance().getCardNumber();
         onChanged();
         return this;
@@ -5687,12 +5687,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setCardNumberBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         cardNumber_ = value;
         onChanged();
         return this;
@@ -5700,7 +5700,7 @@ public final class Trip {
 
       private com.google.protobuf.Timestamp estimatedArrivalDateTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> estimatedArrivalDateTimeBuilder_;
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> estimatedArrivalDateTimeBuilder_;
       /**
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 6;</code>
        * @return Whether the estimatedArrivalDateTime field is set.
@@ -5739,7 +5739,7 @@ public final class Trip {
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 6;</code>
        */
       public Builder setEstimatedArrivalDateTime(
-              com.google.protobuf.Timestamp.Builder builderForValue) {
+          com.google.protobuf.Timestamp.Builder builderForValue) {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           estimatedArrivalDateTime_ = builderForValue.build();
           onChanged();
@@ -5756,7 +5756,7 @@ public final class Trip {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           if (estimatedArrivalDateTime_ != null) {
             estimatedArrivalDateTime_ =
-                    com.google.protobuf.Timestamp.newBuilder(estimatedArrivalDateTime_).mergeFrom(value).buildPartial();
+              com.google.protobuf.Timestamp.newBuilder(estimatedArrivalDateTime_).mergeFrom(value).buildPartial();
           } else {
             estimatedArrivalDateTime_ = value;
           }
@@ -5785,7 +5785,7 @@ public final class Trip {
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 6;</code>
        */
       public com.google.protobuf.Timestamp.Builder getEstimatedArrivalDateTimeBuilder() {
-
+        
         onChanged();
         return getEstimatedArrivalDateTimeFieldBuilder().getBuilder();
       }
@@ -5797,18 +5797,18 @@ public final class Trip {
           return estimatedArrivalDateTimeBuilder_.getMessageOrBuilder();
         } else {
           return estimatedArrivalDateTime_ == null ?
-                  com.google.protobuf.Timestamp.getDefaultInstance() : estimatedArrivalDateTime_;
+              com.google.protobuf.Timestamp.getDefaultInstance() : estimatedArrivalDateTime_;
         }
       }
       /**
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
-      getEstimatedArrivalDateTimeFieldBuilder() {
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEstimatedArrivalDateTimeFieldBuilder() {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           estimatedArrivalDateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
                   getEstimatedArrivalDateTime(),
                   getParentForChildren(),
                   isClean());
@@ -5832,7 +5832,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setEstimatedWaitingTime(long value) {
-
+        
         estimatedWaitingTime_ = value;
         onChanged();
         return this;
@@ -5842,7 +5842,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearEstimatedWaitingTime() {
-
+        
         estimatedWaitingTime_ = 0L;
         onChanged();
         return this;
@@ -5862,7 +5862,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setBookingStatusValue(int value) {
-
+        
         bookingStatus_ = value;
         onChanged();
         return this;
@@ -5886,7 +5886,7 @@ public final class Trip {
         if (value == null) {
           throw new NullPointerException();
         }
-
+        
         bookingStatus_ = value.getNumber();
         onChanged();
         return this;
@@ -5896,7 +5896,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearBookingStatus() {
-
+        
         bookingStatus_ = 0;
         onChanged();
         return this;
@@ -5917,7 +5917,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setUserId(long value) {
-
+        
         userId_ = value;
         onChanged();
         return this;
@@ -5927,20 +5927,20 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
-
+        
         userId_ = 0L;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -5959,12 +5959,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<ConfirmBookingRequest>
-            PARSER = new com.google.protobuf.AbstractParser<ConfirmBookingRequest>() {
+        PARSER = new com.google.protobuf.AbstractParser<ConfirmBookingRequest>() {
       @java.lang.Override
       public ConfirmBookingRequest parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new ConfirmBookingRequest(input, extensionRegistry);
       }
     };
@@ -5986,8 +5986,8 @@ public final class Trip {
   }
 
   public interface ConfirmBookingResponseOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.ConfirmBookingResponse)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.ConfirmBookingResponse)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string result = 1;</code>
@@ -5999,16 +5999,16 @@ public final class Trip {
      * @return The bytes for result.
      */
     com.google.protobuf.ByteString
-    getResultBytes();
+        getResultBytes();
   }
   /**
    * Protobuf type {@code TripService.grpc.ConfirmBookingResponse}
    */
   public static final class ConfirmBookingResponse extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.ConfirmBookingResponse)
-          ConfirmBookingResponseOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.ConfirmBookingResponse)
+      ConfirmBookingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use ConfirmBookingResponse.newBuilder() to construct.
     private ConfirmBookingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -6020,7 +6020,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new ConfirmBookingResponse();
     }
 
@@ -6030,15 +6030,15 @@ public final class Trip {
       return this.unknownFields;
     }
     private ConfirmBookingResponse(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -6055,7 +6055,7 @@ public final class Trip {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -6068,23 +6068,23 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_ConfirmBookingResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_ConfirmBookingResponse_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.ConfirmBookingResponse.class, proto.grpc.Trip.ConfirmBookingResponse.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.ConfirmBookingResponse.class, proto.grpc.Trip.ConfirmBookingResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -6099,8 +6099,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         result_ = s;
         return s;
@@ -6112,12 +6112,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getResultBytes() {
+        getResultBytes() {
       java.lang.Object ref = result_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         result_ = b;
         return b;
       } else {
@@ -6138,7 +6138,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
       }
@@ -6162,7 +6162,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.ConfirmBookingResponse)) {
         return super.equals(obj);
@@ -6170,7 +6170,7 @@ public final class Trip {
       proto.grpc.Trip.ConfirmBookingResponse other = (proto.grpc.Trip.ConfirmBookingResponse) obj;
 
       if (!getResult()
-              .equals(other.getResult())) return false;
+          .equals(other.getResult())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6190,73 +6190,73 @@ public final class Trip {
     }
 
     public static proto.grpc.Trip.ConfirmBookingResponse parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.ConfirmBookingResponse parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.ConfirmBookingResponse parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.ConfirmBookingResponse parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.ConfirmBookingResponse parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.ConfirmBookingResponse parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.ConfirmBookingResponse parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.ConfirmBookingResponse parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.ConfirmBookingResponse parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.ConfirmBookingResponse parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.ConfirmBookingResponse parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.ConfirmBookingResponse parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -6270,12 +6270,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -6283,20 +6283,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.ConfirmBookingResponse}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.ConfirmBookingResponse)
-            proto.grpc.Trip.ConfirmBookingResponseOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.ConfirmBookingResponse)
+        proto.grpc.Trip.ConfirmBookingResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_ConfirmBookingResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_ConfirmBookingResponse_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.ConfirmBookingResponse.class, proto.grpc.Trip.ConfirmBookingResponse.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.ConfirmBookingResponse.class, proto.grpc.Trip.ConfirmBookingResponse.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.ConfirmBookingResponse.newBuilder()
@@ -6305,7 +6305,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -6324,7 +6324,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_ConfirmBookingResponse_descriptor;
       }
 
@@ -6356,30 +6356,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -6410,9 +6410,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.ConfirmBookingResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -6436,7 +6436,7 @@ public final class Trip {
         java.lang.Object ref = result_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           result_ = s;
           return s;
@@ -6449,12 +6449,12 @@ public final class Trip {
        * @return The bytes for result.
        */
       public com.google.protobuf.ByteString
-      getResultBytes() {
+          getResultBytes() {
         java.lang.Object ref = result_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           result_ = b;
           return b;
         } else {
@@ -6467,11 +6467,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setResult(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         result_ = value;
         onChanged();
         return this;
@@ -6481,7 +6481,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearResult() {
-
+        
         result_ = getDefaultInstance().getResult();
         onChanged();
         return this;
@@ -6492,25 +6492,25 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setResultBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         result_ = value;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -6529,12 +6529,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<ConfirmBookingResponse>
-            PARSER = new com.google.protobuf.AbstractParser<ConfirmBookingResponse>() {
+        PARSER = new com.google.protobuf.AbstractParser<ConfirmBookingResponse>() {
       @java.lang.Override
       public ConfirmBookingResponse parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new ConfirmBookingResponse(input, extensionRegistry);
       }
     };
@@ -6556,8 +6556,8 @@ public final class Trip {
   }
 
   public interface GetIncompletedBookingRequestOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.GetIncompletedBookingRequest)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.GetIncompletedBookingRequest)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>uint64 user_id = 1;</code>
@@ -6580,10 +6580,10 @@ public final class Trip {
    * Protobuf type {@code TripService.grpc.GetIncompletedBookingRequest}
    */
   public static final class GetIncompletedBookingRequest extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.GetIncompletedBookingRequest)
-          GetIncompletedBookingRequestOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.GetIncompletedBookingRequest)
+      GetIncompletedBookingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GetIncompletedBookingRequest.newBuilder() to construct.
     private GetIncompletedBookingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -6595,7 +6595,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new GetIncompletedBookingRequest();
     }
 
@@ -6605,15 +6605,15 @@ public final class Trip {
       return this.unknownFields;
     }
     private GetIncompletedBookingRequest(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -6635,7 +6635,7 @@ public final class Trip {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -6648,23 +6648,23 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_GetIncompletedBookingRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_GetIncompletedBookingRequest_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.GetIncompletedBookingRequest.class, proto.grpc.Trip.GetIncompletedBookingRequest.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.GetIncompletedBookingRequest.class, proto.grpc.Trip.GetIncompletedBookingRequest.Builder.class);
     }
 
     public static final int USER_ID_FIELD_NUMBER = 1;
@@ -6710,7 +6710,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (userId_ != 0L) {
         output.writeUInt64(1, userId_);
       }
@@ -6728,11 +6728,11 @@ public final class Trip {
       size = 0;
       if (userId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(1, userId_);
+          .computeUInt64Size(1, userId_);
       }
       if (bookingStatus_ != proto.grpc.Trip.BookingStatus.INCOMPLETED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-                .computeEnumSize(2, bookingStatus_);
+          .computeEnumSize(2, bookingStatus_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6742,7 +6742,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.GetIncompletedBookingRequest)) {
         return super.equals(obj);
@@ -6750,7 +6750,7 @@ public final class Trip {
       proto.grpc.Trip.GetIncompletedBookingRequest other = (proto.grpc.Trip.GetIncompletedBookingRequest) obj;
 
       if (getUserId()
-              != other.getUserId()) return false;
+          != other.getUserId()) return false;
       if (bookingStatus_ != other.bookingStatus_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -6765,7 +6765,7 @@ public final class Trip {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getUserId());
+          getUserId());
       hash = (37 * hash) + BOOKING_STATUS_FIELD_NUMBER;
       hash = (53 * hash) + bookingStatus_;
       hash = (29 * hash) + unknownFields.hashCode();
@@ -6774,73 +6774,73 @@ public final class Trip {
     }
 
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetIncompletedBookingRequest parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -6854,12 +6854,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -6867,20 +6867,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.GetIncompletedBookingRequest}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.GetIncompletedBookingRequest)
-            proto.grpc.Trip.GetIncompletedBookingRequestOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.GetIncompletedBookingRequest)
+        proto.grpc.Trip.GetIncompletedBookingRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetIncompletedBookingRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetIncompletedBookingRequest_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.GetIncompletedBookingRequest.class, proto.grpc.Trip.GetIncompletedBookingRequest.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.GetIncompletedBookingRequest.class, proto.grpc.Trip.GetIncompletedBookingRequest.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.GetIncompletedBookingRequest.newBuilder()
@@ -6889,7 +6889,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -6910,7 +6910,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetIncompletedBookingRequest_descriptor;
       }
 
@@ -6943,30 +6943,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -6999,9 +6999,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.GetIncompletedBookingRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -7031,7 +7031,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setUserId(long value) {
-
+        
         userId_ = value;
         onChanged();
         return this;
@@ -7041,7 +7041,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
-
+        
         userId_ = 0L;
         onChanged();
         return this;
@@ -7061,7 +7061,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setBookingStatusValue(int value) {
-
+        
         bookingStatus_ = value;
         onChanged();
         return this;
@@ -7085,7 +7085,7 @@ public final class Trip {
         if (value == null) {
           throw new NullPointerException();
         }
-
+        
         bookingStatus_ = value.getNumber();
         onChanged();
         return this;
@@ -7095,20 +7095,20 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearBookingStatus() {
-
+        
         bookingStatus_ = 0;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -7127,12 +7127,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<GetIncompletedBookingRequest>
-            PARSER = new com.google.protobuf.AbstractParser<GetIncompletedBookingRequest>() {
+        PARSER = new com.google.protobuf.AbstractParser<GetIncompletedBookingRequest>() {
       @java.lang.Override
       public GetIncompletedBookingRequest parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new GetIncompletedBookingRequest(input, extensionRegistry);
       }
     };
@@ -7154,8 +7154,8 @@ public final class Trip {
   }
 
   public interface GetIncompletedBookingResponseOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.GetIncompletedBookingResponse)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.GetIncompletedBookingResponse)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>.TripService.grpc.TripBooking trip_booking = 1;</code>
@@ -7176,10 +7176,10 @@ public final class Trip {
    * Protobuf type {@code TripService.grpc.GetIncompletedBookingResponse}
    */
   public static final class GetIncompletedBookingResponse extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.GetIncompletedBookingResponse)
-          GetIncompletedBookingResponseOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.GetIncompletedBookingResponse)
+      GetIncompletedBookingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GetIncompletedBookingResponse.newBuilder() to construct.
     private GetIncompletedBookingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -7190,7 +7190,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new GetIncompletedBookingResponse();
     }
 
@@ -7200,15 +7200,15 @@ public final class Trip {
       return this.unknownFields;
     }
     private GetIncompletedBookingResponse(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -7232,7 +7232,7 @@ public final class Trip {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -7245,23 +7245,23 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_GetIncompletedBookingResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_GetIncompletedBookingResponse_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.GetIncompletedBookingResponse.class, proto.grpc.Trip.GetIncompletedBookingResponse.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.GetIncompletedBookingResponse.class, proto.grpc.Trip.GetIncompletedBookingResponse.Builder.class);
     }
 
     public static final int TRIP_BOOKING_FIELD_NUMBER = 1;
@@ -7303,7 +7303,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (tripBooking_ != null) {
         output.writeMessage(1, getTripBooking());
       }
@@ -7318,7 +7318,7 @@ public final class Trip {
       size = 0;
       if (tripBooking_ != null) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(1, getTripBooking());
+          .computeMessageSize(1, getTripBooking());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7328,7 +7328,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.GetIncompletedBookingResponse)) {
         return super.equals(obj);
@@ -7338,7 +7338,7 @@ public final class Trip {
       if (hasTripBooking() != other.hasTripBooking()) return false;
       if (hasTripBooking()) {
         if (!getTripBooking()
-                .equals(other.getTripBooking())) return false;
+            .equals(other.getTripBooking())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -7361,73 +7361,73 @@ public final class Trip {
     }
 
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetIncompletedBookingResponse parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -7441,12 +7441,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -7454,20 +7454,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.GetIncompletedBookingResponse}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.GetIncompletedBookingResponse)
-            proto.grpc.Trip.GetIncompletedBookingResponseOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.GetIncompletedBookingResponse)
+        proto.grpc.Trip.GetIncompletedBookingResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetIncompletedBookingResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetIncompletedBookingResponse_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.GetIncompletedBookingResponse.class, proto.grpc.Trip.GetIncompletedBookingResponse.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.GetIncompletedBookingResponse.class, proto.grpc.Trip.GetIncompletedBookingResponse.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.GetIncompletedBookingResponse.newBuilder()
@@ -7476,7 +7476,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -7499,7 +7499,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetIncompletedBookingResponse_descriptor;
       }
 
@@ -7535,30 +7535,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -7588,9 +7588,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.GetIncompletedBookingResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -7607,7 +7607,7 @@ public final class Trip {
 
       private proto.grpc.Trip.TripBooking tripBooking_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder> tripBookingBuilder_;
+          proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder> tripBookingBuilder_;
       /**
        * <code>.TripService.grpc.TripBooking trip_booking = 1;</code>
        * @return Whether the tripBooking field is set.
@@ -7646,7 +7646,7 @@ public final class Trip {
        * <code>.TripService.grpc.TripBooking trip_booking = 1;</code>
        */
       public Builder setTripBooking(
-              proto.grpc.Trip.TripBooking.Builder builderForValue) {
+          proto.grpc.Trip.TripBooking.Builder builderForValue) {
         if (tripBookingBuilder_ == null) {
           tripBooking_ = builderForValue.build();
           onChanged();
@@ -7663,7 +7663,7 @@ public final class Trip {
         if (tripBookingBuilder_ == null) {
           if (tripBooking_ != null) {
             tripBooking_ =
-                    proto.grpc.Trip.TripBooking.newBuilder(tripBooking_).mergeFrom(value).buildPartial();
+              proto.grpc.Trip.TripBooking.newBuilder(tripBooking_).mergeFrom(value).buildPartial();
           } else {
             tripBooking_ = value;
           }
@@ -7692,7 +7692,7 @@ public final class Trip {
        * <code>.TripService.grpc.TripBooking trip_booking = 1;</code>
        */
       public proto.grpc.Trip.TripBooking.Builder getTripBookingBuilder() {
-
+        
         onChanged();
         return getTripBookingFieldBuilder().getBuilder();
       }
@@ -7704,18 +7704,18 @@ public final class Trip {
           return tripBookingBuilder_.getMessageOrBuilder();
         } else {
           return tripBooking_ == null ?
-                  proto.grpc.Trip.TripBooking.getDefaultInstance() : tripBooking_;
+              proto.grpc.Trip.TripBooking.getDefaultInstance() : tripBooking_;
         }
       }
       /**
        * <code>.TripService.grpc.TripBooking trip_booking = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder>
-      getTripBookingFieldBuilder() {
+          proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder> 
+          getTripBookingFieldBuilder() {
         if (tripBookingBuilder_ == null) {
           tripBookingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder>(
+              proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder>(
                   getTripBooking(),
                   getParentForChildren(),
                   isClean());
@@ -7725,13 +7725,13 @@ public final class Trip {
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -7750,12 +7750,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<GetIncompletedBookingResponse>
-            PARSER = new com.google.protobuf.AbstractParser<GetIncompletedBookingResponse>() {
+        PARSER = new com.google.protobuf.AbstractParser<GetIncompletedBookingResponse>() {
       @java.lang.Override
       public GetIncompletedBookingResponse parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new GetIncompletedBookingResponse(input, extensionRegistry);
       }
     };
@@ -7777,8 +7777,8 @@ public final class Trip {
   }
 
   public interface UpdateBookingRequestOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.UpdateBookingRequest)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.UpdateBookingRequest)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>uint64 id = 1;</code>
@@ -7796,7 +7796,7 @@ public final class Trip {
      * @return The bytes for pickup.
      */
     com.google.protobuf.ByteString
-    getPickupBytes();
+        getPickupBytes();
 
     /**
      * <code>string destination = 3;</code>
@@ -7808,7 +7808,7 @@ public final class Trip {
      * @return The bytes for destination.
      */
     com.google.protobuf.ByteString
-    getDestinationBytes();
+        getDestinationBytes();
 
     /**
      * <code>double distance = 4;</code>
@@ -7832,7 +7832,7 @@ public final class Trip {
      * @return The bytes for cardNumber.
      */
     com.google.protobuf.ByteString
-    getCardNumberBytes();
+        getCardNumberBytes();
 
     /**
      * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 7;</code>
@@ -7880,10 +7880,10 @@ public final class Trip {
    * Protobuf type {@code TripService.grpc.UpdateBookingRequest}
    */
   public static final class UpdateBookingRequest extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.UpdateBookingRequest)
-          UpdateBookingRequestOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.UpdateBookingRequest)
+      UpdateBookingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use UpdateBookingRequest.newBuilder() to construct.
     private UpdateBookingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -7898,7 +7898,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new UpdateBookingRequest();
     }
 
@@ -7908,15 +7908,15 @@ public final class Trip {
       return this.unknownFields;
     }
     private UpdateBookingRequest(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -7989,7 +7989,7 @@ public final class Trip {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -8002,23 +8002,23 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_UpdateBookingRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_UpdateBookingRequest_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.UpdateBookingRequest.class, proto.grpc.Trip.UpdateBookingRequest.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.UpdateBookingRequest.class, proto.grpc.Trip.UpdateBookingRequest.Builder.class);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -8044,8 +8044,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         pickup_ = s;
         return s;
@@ -8057,12 +8057,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getPickupBytes() {
+        getPickupBytes() {
       java.lang.Object ref = pickup_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         pickup_ = b;
         return b;
       } else {
@@ -8082,8 +8082,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         destination_ = s;
         return s;
@@ -8095,12 +8095,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getDestinationBytes() {
+        getDestinationBytes() {
       java.lang.Object ref = destination_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         destination_ = b;
         return b;
       } else {
@@ -8142,8 +8142,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         cardNumber_ = s;
         return s;
@@ -8155,12 +8155,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getCardNumberBytes() {
+        getCardNumberBytes() {
       java.lang.Object ref = cardNumber_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         cardNumber_ = b;
         return b;
       } else {
@@ -8248,7 +8248,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (id_ != 0L) {
         output.writeUInt64(1, id_);
       }
@@ -8290,7 +8290,7 @@ public final class Trip {
       size = 0;
       if (id_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(1, id_);
+          .computeUInt64Size(1, id_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pickup_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, pickup_);
@@ -8300,30 +8300,30 @@ public final class Trip {
       }
       if (java.lang.Double.doubleToRawLongBits(distance_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(4, distance_);
+          .computeDoubleSize(4, distance_);
       }
       if (java.lang.Double.doubleToRawLongBits(fare_) != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeDoubleSize(5, fare_);
+          .computeDoubleSize(5, fare_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cardNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, cardNumber_);
       }
       if (estimatedArrivalDateTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(7, getEstimatedArrivalDateTime());
+          .computeMessageSize(7, getEstimatedArrivalDateTime());
       }
       if (estimatedWaitingTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt64Size(8, estimatedWaitingTime_);
+          .computeInt64Size(8, estimatedWaitingTime_);
       }
       if (bookingStatus_ != proto.grpc.Trip.BookingStatus.INCOMPLETED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-                .computeEnumSize(9, bookingStatus_);
+          .computeEnumSize(9, bookingStatus_);
       }
       if (userId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(10, userId_);
+          .computeUInt64Size(10, userId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8333,7 +8333,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.UpdateBookingRequest)) {
         return super.equals(obj);
@@ -8341,29 +8341,29 @@ public final class Trip {
       proto.grpc.Trip.UpdateBookingRequest other = (proto.grpc.Trip.UpdateBookingRequest) obj;
 
       if (getId()
-              != other.getId()) return false;
+          != other.getId()) return false;
       if (!getPickup()
-              .equals(other.getPickup())) return false;
+          .equals(other.getPickup())) return false;
       if (!getDestination()
-              .equals(other.getDestination())) return false;
+          .equals(other.getDestination())) return false;
       if (java.lang.Double.doubleToLongBits(getDistance())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getDistance())) return false;
       if (java.lang.Double.doubleToLongBits(getFare())
-              != java.lang.Double.doubleToLongBits(
+          != java.lang.Double.doubleToLongBits(
               other.getFare())) return false;
       if (!getCardNumber()
-              .equals(other.getCardNumber())) return false;
+          .equals(other.getCardNumber())) return false;
       if (hasEstimatedArrivalDateTime() != other.hasEstimatedArrivalDateTime()) return false;
       if (hasEstimatedArrivalDateTime()) {
         if (!getEstimatedArrivalDateTime()
-                .equals(other.getEstimatedArrivalDateTime())) return false;
+            .equals(other.getEstimatedArrivalDateTime())) return false;
       }
       if (getEstimatedWaitingTime()
-              != other.getEstimatedWaitingTime()) return false;
+          != other.getEstimatedWaitingTime()) return false;
       if (bookingStatus_ != other.bookingStatus_) return false;
       if (getUserId()
-              != other.getUserId()) return false;
+          != other.getUserId()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8377,17 +8377,17 @@ public final class Trip {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getId());
+          getId());
       hash = (37 * hash) + PICKUP_FIELD_NUMBER;
       hash = (53 * hash) + getPickup().hashCode();
       hash = (37 * hash) + DESTINATION_FIELD_NUMBER;
       hash = (53 * hash) + getDestination().hashCode();
       hash = (37 * hash) + DISTANCE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              java.lang.Double.doubleToLongBits(getDistance()));
+          java.lang.Double.doubleToLongBits(getDistance()));
       hash = (37 * hash) + FARE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              java.lang.Double.doubleToLongBits(getFare()));
+          java.lang.Double.doubleToLongBits(getFare()));
       hash = (37 * hash) + CARD_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getCardNumber().hashCode();
       if (hasEstimatedArrivalDateTime()) {
@@ -8396,85 +8396,85 @@ public final class Trip {
       }
       hash = (37 * hash) + ESTIMATED_WAITING_TIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getEstimatedWaitingTime());
+          getEstimatedWaitingTime());
       hash = (37 * hash) + BOOKING_STATUS_FIELD_NUMBER;
       hash = (53 * hash) + bookingStatus_;
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getUserId());
+          getUserId());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
     public static proto.grpc.Trip.UpdateBookingRequest parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.UpdateBookingRequest parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.UpdateBookingRequest parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.UpdateBookingRequest parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.UpdateBookingRequest parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.UpdateBookingRequest parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.UpdateBookingRequest parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.UpdateBookingRequest parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.UpdateBookingRequest parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.UpdateBookingRequest parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.UpdateBookingRequest parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.UpdateBookingRequest parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -8488,12 +8488,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -8505,20 +8505,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.UpdateBookingRequest}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.UpdateBookingRequest)
-            proto.grpc.Trip.UpdateBookingRequestOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.UpdateBookingRequest)
+        proto.grpc.Trip.UpdateBookingRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_UpdateBookingRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_UpdateBookingRequest_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.UpdateBookingRequest.class, proto.grpc.Trip.UpdateBookingRequest.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.UpdateBookingRequest.class, proto.grpc.Trip.UpdateBookingRequest.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.UpdateBookingRequest.newBuilder()
@@ -8527,7 +8527,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -8568,7 +8568,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_UpdateBookingRequest_descriptor;
       }
 
@@ -8613,30 +8613,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -8696,9 +8696,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.UpdateBookingRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -8728,7 +8728,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-
+        
         id_ = value;
         onChanged();
         return this;
@@ -8738,7 +8738,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-
+        
         id_ = 0L;
         onChanged();
         return this;
@@ -8753,7 +8753,7 @@ public final class Trip {
         java.lang.Object ref = pickup_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           pickup_ = s;
           return s;
@@ -8766,12 +8766,12 @@ public final class Trip {
        * @return The bytes for pickup.
        */
       public com.google.protobuf.ByteString
-      getPickupBytes() {
+          getPickupBytes() {
         java.lang.Object ref = pickup_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           pickup_ = b;
           return b;
         } else {
@@ -8784,11 +8784,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPickup(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         pickup_ = value;
         onChanged();
         return this;
@@ -8798,7 +8798,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearPickup() {
-
+        
         pickup_ = getDefaultInstance().getPickup();
         onChanged();
         return this;
@@ -8809,12 +8809,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPickupBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         pickup_ = value;
         onChanged();
         return this;
@@ -8829,7 +8829,7 @@ public final class Trip {
         java.lang.Object ref = destination_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           destination_ = s;
           return s;
@@ -8842,12 +8842,12 @@ public final class Trip {
        * @return The bytes for destination.
        */
       public com.google.protobuf.ByteString
-      getDestinationBytes() {
+          getDestinationBytes() {
         java.lang.Object ref = destination_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           destination_ = b;
           return b;
         } else {
@@ -8860,11 +8860,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDestination(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         destination_ = value;
         onChanged();
         return this;
@@ -8874,7 +8874,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearDestination() {
-
+        
         destination_ = getDefaultInstance().getDestination();
         onChanged();
         return this;
@@ -8885,12 +8885,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDestinationBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         destination_ = value;
         onChanged();
         return this;
@@ -8911,7 +8911,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setDistance(double value) {
-
+        
         distance_ = value;
         onChanged();
         return this;
@@ -8921,7 +8921,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearDistance() {
-
+        
         distance_ = 0D;
         onChanged();
         return this;
@@ -8942,7 +8942,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setFare(double value) {
-
+        
         fare_ = value;
         onChanged();
         return this;
@@ -8952,7 +8952,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearFare() {
-
+        
         fare_ = 0D;
         onChanged();
         return this;
@@ -8967,7 +8967,7 @@ public final class Trip {
         java.lang.Object ref = cardNumber_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           cardNumber_ = s;
           return s;
@@ -8980,12 +8980,12 @@ public final class Trip {
        * @return The bytes for cardNumber.
        */
       public com.google.protobuf.ByteString
-      getCardNumberBytes() {
+          getCardNumberBytes() {
         java.lang.Object ref = cardNumber_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           cardNumber_ = b;
           return b;
         } else {
@@ -8998,11 +8998,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setCardNumber(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         cardNumber_ = value;
         onChanged();
         return this;
@@ -9012,7 +9012,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearCardNumber() {
-
+        
         cardNumber_ = getDefaultInstance().getCardNumber();
         onChanged();
         return this;
@@ -9023,12 +9023,12 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setCardNumberBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         cardNumber_ = value;
         onChanged();
         return this;
@@ -9036,7 +9036,7 @@ public final class Trip {
 
       private com.google.protobuf.Timestamp estimatedArrivalDateTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> estimatedArrivalDateTimeBuilder_;
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> estimatedArrivalDateTimeBuilder_;
       /**
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 7;</code>
        * @return Whether the estimatedArrivalDateTime field is set.
@@ -9075,7 +9075,7 @@ public final class Trip {
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 7;</code>
        */
       public Builder setEstimatedArrivalDateTime(
-              com.google.protobuf.Timestamp.Builder builderForValue) {
+          com.google.protobuf.Timestamp.Builder builderForValue) {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           estimatedArrivalDateTime_ = builderForValue.build();
           onChanged();
@@ -9092,7 +9092,7 @@ public final class Trip {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           if (estimatedArrivalDateTime_ != null) {
             estimatedArrivalDateTime_ =
-                    com.google.protobuf.Timestamp.newBuilder(estimatedArrivalDateTime_).mergeFrom(value).buildPartial();
+              com.google.protobuf.Timestamp.newBuilder(estimatedArrivalDateTime_).mergeFrom(value).buildPartial();
           } else {
             estimatedArrivalDateTime_ = value;
           }
@@ -9121,7 +9121,7 @@ public final class Trip {
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getEstimatedArrivalDateTimeBuilder() {
-
+        
         onChanged();
         return getEstimatedArrivalDateTimeFieldBuilder().getBuilder();
       }
@@ -9133,18 +9133,18 @@ public final class Trip {
           return estimatedArrivalDateTimeBuilder_.getMessageOrBuilder();
         } else {
           return estimatedArrivalDateTime_ == null ?
-                  com.google.protobuf.Timestamp.getDefaultInstance() : estimatedArrivalDateTime_;
+              com.google.protobuf.Timestamp.getDefaultInstance() : estimatedArrivalDateTime_;
         }
       }
       /**
        * <code>.google.protobuf.Timestamp estimated_arrival_date_time = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>
-      getEstimatedArrivalDateTimeFieldBuilder() {
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEstimatedArrivalDateTimeFieldBuilder() {
         if (estimatedArrivalDateTimeBuilder_ == null) {
           estimatedArrivalDateTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
                   getEstimatedArrivalDateTime(),
                   getParentForChildren(),
                   isClean());
@@ -9168,7 +9168,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setEstimatedWaitingTime(long value) {
-
+        
         estimatedWaitingTime_ = value;
         onChanged();
         return this;
@@ -9178,7 +9178,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearEstimatedWaitingTime() {
-
+        
         estimatedWaitingTime_ = 0L;
         onChanged();
         return this;
@@ -9198,7 +9198,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setBookingStatusValue(int value) {
-
+        
         bookingStatus_ = value;
         onChanged();
         return this;
@@ -9222,7 +9222,7 @@ public final class Trip {
         if (value == null) {
           throw new NullPointerException();
         }
-
+        
         bookingStatus_ = value.getNumber();
         onChanged();
         return this;
@@ -9232,7 +9232,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearBookingStatus() {
-
+        
         bookingStatus_ = 0;
         onChanged();
         return this;
@@ -9253,7 +9253,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setUserId(long value) {
-
+        
         userId_ = value;
         onChanged();
         return this;
@@ -9263,20 +9263,20 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
-
+        
         userId_ = 0L;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -9295,12 +9295,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<UpdateBookingRequest>
-            PARSER = new com.google.protobuf.AbstractParser<UpdateBookingRequest>() {
+        PARSER = new com.google.protobuf.AbstractParser<UpdateBookingRequest>() {
       @java.lang.Override
       public UpdateBookingRequest parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new UpdateBookingRequest(input, extensionRegistry);
       }
     };
@@ -9322,8 +9322,8 @@ public final class Trip {
   }
 
   public interface UpdateBookingResponseOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.UpdateBookingResponse)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.UpdateBookingResponse)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string result = 1;</code>
@@ -9335,16 +9335,16 @@ public final class Trip {
      * @return The bytes for result.
      */
     com.google.protobuf.ByteString
-    getResultBytes();
+        getResultBytes();
   }
   /**
    * Protobuf type {@code TripService.grpc.UpdateBookingResponse}
    */
   public static final class UpdateBookingResponse extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.UpdateBookingResponse)
-          UpdateBookingResponseOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.UpdateBookingResponse)
+      UpdateBookingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use UpdateBookingResponse.newBuilder() to construct.
     private UpdateBookingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -9356,7 +9356,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new UpdateBookingResponse();
     }
 
@@ -9366,15 +9366,15 @@ public final class Trip {
       return this.unknownFields;
     }
     private UpdateBookingResponse(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -9391,7 +9391,7 @@ public final class Trip {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -9404,23 +9404,23 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_UpdateBookingResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_UpdateBookingResponse_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.UpdateBookingResponse.class, proto.grpc.Trip.UpdateBookingResponse.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.UpdateBookingResponse.class, proto.grpc.Trip.UpdateBookingResponse.Builder.class);
     }
 
     public static final int RESULT_FIELD_NUMBER = 1;
@@ -9435,8 +9435,8 @@ public final class Trip {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         result_ = s;
         return s;
@@ -9448,12 +9448,12 @@ public final class Trip {
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-    getResultBytes() {
+        getResultBytes() {
       java.lang.Object ref = result_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
         result_ = b;
         return b;
       } else {
@@ -9474,7 +9474,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(result_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_);
       }
@@ -9498,7 +9498,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.UpdateBookingResponse)) {
         return super.equals(obj);
@@ -9506,7 +9506,7 @@ public final class Trip {
       proto.grpc.Trip.UpdateBookingResponse other = (proto.grpc.Trip.UpdateBookingResponse) obj;
 
       if (!getResult()
-              .equals(other.getResult())) return false;
+          .equals(other.getResult())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9526,73 +9526,73 @@ public final class Trip {
     }
 
     public static proto.grpc.Trip.UpdateBookingResponse parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.UpdateBookingResponse parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.UpdateBookingResponse parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.UpdateBookingResponse parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.UpdateBookingResponse parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.UpdateBookingResponse parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.UpdateBookingResponse parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.UpdateBookingResponse parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.UpdateBookingResponse parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.UpdateBookingResponse parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.UpdateBookingResponse parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.UpdateBookingResponse parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -9606,12 +9606,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -9619,20 +9619,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.UpdateBookingResponse}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.UpdateBookingResponse)
-            proto.grpc.Trip.UpdateBookingResponseOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.UpdateBookingResponse)
+        proto.grpc.Trip.UpdateBookingResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_UpdateBookingResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_UpdateBookingResponse_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.UpdateBookingResponse.class, proto.grpc.Trip.UpdateBookingResponse.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.UpdateBookingResponse.class, proto.grpc.Trip.UpdateBookingResponse.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.UpdateBookingResponse.newBuilder()
@@ -9641,7 +9641,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -9660,7 +9660,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_UpdateBookingResponse_descriptor;
       }
 
@@ -9692,30 +9692,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -9746,9 +9746,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.UpdateBookingResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -9772,7 +9772,7 @@ public final class Trip {
         java.lang.Object ref = result_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
+              (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           result_ = s;
           return s;
@@ -9785,12 +9785,12 @@ public final class Trip {
        * @return The bytes for result.
        */
       public com.google.protobuf.ByteString
-      getResultBytes() {
+          getResultBytes() {
         java.lang.Object ref = result_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
           result_ = b;
           return b;
         } else {
@@ -9803,11 +9803,11 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setResult(
-              java.lang.String value) {
+          java.lang.String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-
+    throw new NullPointerException();
+  }
+  
         result_ = value;
         onChanged();
         return this;
@@ -9817,7 +9817,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearResult() {
-
+        
         result_ = getDefaultInstance().getResult();
         onChanged();
         return this;
@@ -9828,25 +9828,25 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setResultBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
-
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         result_ = value;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -9865,12 +9865,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<UpdateBookingResponse>
-            PARSER = new com.google.protobuf.AbstractParser<UpdateBookingResponse>() {
+        PARSER = new com.google.protobuf.AbstractParser<UpdateBookingResponse>() {
       @java.lang.Override
       public UpdateBookingResponse parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new UpdateBookingResponse(input, extensionRegistry);
       }
     };
@@ -9892,8 +9892,8 @@ public final class Trip {
   }
 
   public interface GetBookingHistoryRequestOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.GetBookingHistoryRequest)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.GetBookingHistoryRequest)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>uint64 page = 1;</code>
@@ -9976,10 +9976,10 @@ public final class Trip {
    * Protobuf type {@code TripService.grpc.GetBookingHistoryRequest}
    */
   public static final class GetBookingHistoryRequest extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.GetBookingHistoryRequest)
-          GetBookingHistoryRequestOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.GetBookingHistoryRequest)
+      GetBookingHistoryRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GetBookingHistoryRequest.newBuilder() to construct.
     private GetBookingHistoryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -9991,7 +9991,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new GetBookingHistoryRequest();
     }
 
@@ -10001,16 +10001,16 @@ public final class Trip {
       return this.unknownFields;
     }
     private GetBookingHistoryRequest(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -10064,7 +10064,7 @@ public final class Trip {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -10077,7 +10077,7 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           bookingStatuses_ = java.util.Collections.unmodifiableList(bookingStatuses_);
@@ -10087,16 +10087,16 @@ public final class Trip {
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_GetBookingHistoryRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_GetBookingHistoryRequest_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.GetBookingHistoryRequest.class, proto.grpc.Trip.GetBookingHistoryRequest.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.GetBookingHistoryRequest.class, proto.grpc.Trip.GetBookingHistoryRequest.Builder.class);
     }
 
     public static final int PAGE_FIELD_NUMBER = 1;
@@ -10135,9 +10135,9 @@ public final class Trip {
     public static final int BOOKING_STATUSES_FIELD_NUMBER = 4;
     private java.util.List<java.lang.Integer> bookingStatuses_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
-            java.lang.Integer, proto.grpc.Trip.BookingStatus> bookingStatuses_converter_ =
+        java.lang.Integer, proto.grpc.Trip.BookingStatus> bookingStatuses_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
-                    java.lang.Integer, proto.grpc.Trip.BookingStatus>() {
+                java.lang.Integer, proto.grpc.Trip.BookingStatus>() {
               public proto.grpc.Trip.BookingStatus convert(java.lang.Integer from) {
                 @SuppressWarnings("deprecation")
                 proto.grpc.Trip.BookingStatus result = proto.grpc.Trip.BookingStatus.valueOf(from);
@@ -10155,7 +10155,7 @@ public final class Trip {
     @java.lang.Override
     public java.util.List<proto.grpc.Trip.BookingStatus> getBookingStatusesList() {
       return new com.google.protobuf.Internal.ListAdapter<
-              java.lang.Integer, proto.grpc.Trip.BookingStatus>(bookingStatuses_, bookingStatuses_converter_);
+          java.lang.Integer, proto.grpc.Trip.BookingStatus>(bookingStatuses_, bookingStatuses_converter_);
     }
     /**
      * <pre>
@@ -10238,7 +10238,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       getSerializedSize();
       if (page_ != 0L) {
         output.writeUInt64(1, page_);
@@ -10270,31 +10270,31 @@ public final class Trip {
       size = 0;
       if (page_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(1, page_);
+          .computeUInt64Size(1, page_);
       }
       if (limit_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(2, limit_);
+          .computeUInt64Size(2, limit_);
       }
       if (userId_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(3, userId_);
+          .computeUInt64Size(3, userId_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < bookingStatuses_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-                  .computeEnumSizeNoTag(bookingStatuses_.get(i));
+            .computeEnumSizeNoTag(bookingStatuses_.get(i));
         }
         size += dataSize;
         if (!getBookingStatusesList().isEmpty()) {  size += 1;
           size += com.google.protobuf.CodedOutputStream
-                  .computeUInt32SizeNoTag(dataSize);
+            .computeUInt32SizeNoTag(dataSize);
         }bookingStatusesMemoizedSerializedSize = dataSize;
       }
       if (orderAsc_ != false) {
         size += com.google.protobuf.CodedOutputStream
-                .computeBoolSize(5, orderAsc_);
+          .computeBoolSize(5, orderAsc_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10304,7 +10304,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.GetBookingHistoryRequest)) {
         return super.equals(obj);
@@ -10312,14 +10312,14 @@ public final class Trip {
       proto.grpc.Trip.GetBookingHistoryRequest other = (proto.grpc.Trip.GetBookingHistoryRequest) obj;
 
       if (getPage()
-              != other.getPage()) return false;
+          != other.getPage()) return false;
       if (getLimit()
-              != other.getLimit()) return false;
+          != other.getLimit()) return false;
       if (getUserId()
-              != other.getUserId()) return false;
+          != other.getUserId()) return false;
       if (!bookingStatuses_.equals(other.bookingStatuses_)) return false;
       if (getOrderAsc()
-              != other.getOrderAsc()) return false;
+          != other.getOrderAsc()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10333,93 +10333,93 @@ public final class Trip {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PAGE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getPage());
+          getPage());
       hash = (37 * hash) + LIMIT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getLimit());
+          getLimit());
       hash = (37 * hash) + USER_ID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getUserId());
+          getUserId());
       if (getBookingStatusesCount() > 0) {
         hash = (37 * hash) + BOOKING_STATUSES_FIELD_NUMBER;
         hash = (53 * hash) + bookingStatuses_.hashCode();
       }
       hash = (37 * hash) + ORDER_ASC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getOrderAsc());
+          getOrderAsc());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
     public static proto.grpc.Trip.GetBookingHistoryRequest parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetBookingHistoryRequest parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetBookingHistoryRequest parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetBookingHistoryRequest parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetBookingHistoryRequest parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetBookingHistoryRequest parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetBookingHistoryRequest parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetBookingHistoryRequest parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.GetBookingHistoryRequest parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetBookingHistoryRequest parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.GetBookingHistoryRequest parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetBookingHistoryRequest parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -10433,12 +10433,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -10446,20 +10446,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.GetBookingHistoryRequest}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.GetBookingHistoryRequest)
-            proto.grpc.Trip.GetBookingHistoryRequestOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.GetBookingHistoryRequest)
+        proto.grpc.Trip.GetBookingHistoryRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetBookingHistoryRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetBookingHistoryRequest_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.GetBookingHistoryRequest.class, proto.grpc.Trip.GetBookingHistoryRequest.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.GetBookingHistoryRequest.class, proto.grpc.Trip.GetBookingHistoryRequest.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.GetBookingHistoryRequest.newBuilder()
@@ -10468,7 +10468,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -10495,7 +10495,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetBookingHistoryRequest_descriptor;
       }
 
@@ -10536,30 +10536,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -10608,9 +10608,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.GetBookingHistoryRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -10641,7 +10641,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setPage(long value) {
-
+        
         page_ = value;
         onChanged();
         return this;
@@ -10651,7 +10651,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearPage() {
-
+        
         page_ = 0L;
         onChanged();
         return this;
@@ -10672,7 +10672,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setLimit(long value) {
-
+        
         limit_ = value;
         onChanged();
         return this;
@@ -10682,7 +10682,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearLimit() {
-
+        
         limit_ = 0L;
         onChanged();
         return this;
@@ -10703,7 +10703,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setUserId(long value) {
-
+        
         userId_ = value;
         onChanged();
         return this;
@@ -10713,14 +10713,14 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
-
+        
         userId_ = 0L;
         onChanged();
         return this;
       }
 
       private java.util.List<java.lang.Integer> bookingStatuses_ =
-              java.util.Collections.emptyList();
+        java.util.Collections.emptyList();
       private void ensureBookingStatusesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           bookingStatuses_ = new java.util.ArrayList<java.lang.Integer>(bookingStatuses_);
@@ -10737,7 +10737,7 @@ public final class Trip {
        */
       public java.util.List<proto.grpc.Trip.BookingStatus> getBookingStatusesList() {
         return new com.google.protobuf.Internal.ListAdapter<
-                java.lang.Integer, proto.grpc.Trip.BookingStatus>(bookingStatuses_, bookingStatuses_converter_);
+            java.lang.Integer, proto.grpc.Trip.BookingStatus>(bookingStatuses_, bookingStatuses_converter_);
       }
       /**
        * <pre>
@@ -10773,7 +10773,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setBookingStatuses(
-              int index, proto.grpc.Trip.BookingStatus value) {
+          int index, proto.grpc.Trip.BookingStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -10810,7 +10810,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder addAllBookingStatuses(
-              java.lang.Iterable<? extends proto.grpc.Trip.BookingStatus> values) {
+          java.lang.Iterable<? extends proto.grpc.Trip.BookingStatus> values) {
         ensureBookingStatusesIsMutable();
         for (proto.grpc.Trip.BookingStatus value : values) {
           bookingStatuses_.add(value.getNumber());
@@ -10867,7 +10867,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setBookingStatusesValue(
-              int index, int value) {
+          int index, int value) {
         ensureBookingStatusesIsMutable();
         bookingStatuses_.set(index, value);
         onChanged();
@@ -10898,7 +10898,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder addAllBookingStatusesValue(
-              java.lang.Iterable<java.lang.Integer> values) {
+          java.lang.Iterable<java.lang.Integer> values) {
         ensureBookingStatusesIsMutable();
         for (int value : values) {
           bookingStatuses_.add(value);
@@ -10930,7 +10930,7 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder setOrderAsc(boolean value) {
-
+        
         orderAsc_ = value;
         onChanged();
         return this;
@@ -10944,20 +10944,20 @@ public final class Trip {
        * @return This builder for chaining.
        */
       public Builder clearOrderAsc() {
-
+        
         orderAsc_ = false;
         onChanged();
         return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -10976,12 +10976,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<GetBookingHistoryRequest>
-            PARSER = new com.google.protobuf.AbstractParser<GetBookingHistoryRequest>() {
+        PARSER = new com.google.protobuf.AbstractParser<GetBookingHistoryRequest>() {
       @java.lang.Override
       public GetBookingHistoryRequest parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new GetBookingHistoryRequest(input, extensionRegistry);
       }
     };
@@ -11003,8 +11003,8 @@ public final class Trip {
   }
 
   public interface GetBookingHistoryResponseOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:TripService.grpc.GetBookingHistoryResponse)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:TripService.grpc.GetBookingHistoryResponse)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>.TripService.grpc.Pagination pagination = 1;</code>
@@ -11024,8 +11024,8 @@ public final class Trip {
     /**
      * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
      */
-    java.util.List<proto.grpc.Trip.TripBooking>
-    getResultList();
+    java.util.List<proto.grpc.Trip.TripBooking> 
+        getResultList();
     /**
      * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
      */
@@ -11037,22 +11037,22 @@ public final class Trip {
     /**
      * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
      */
-    java.util.List<? extends proto.grpc.Trip.TripBookingOrBuilder>
-    getResultOrBuilderList();
+    java.util.List<? extends proto.grpc.Trip.TripBookingOrBuilder> 
+        getResultOrBuilderList();
     /**
      * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
      */
     proto.grpc.Trip.TripBookingOrBuilder getResultOrBuilder(
-            int index);
+        int index);
   }
   /**
    * Protobuf type {@code TripService.grpc.GetBookingHistoryResponse}
    */
   public static final class GetBookingHistoryResponse extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:TripService.grpc.GetBookingHistoryResponse)
-          GetBookingHistoryResponseOrBuilder {
-    private static final long serialVersionUID = 0L;
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:TripService.grpc.GetBookingHistoryResponse)
+      GetBookingHistoryResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
     // Use GetBookingHistoryResponse.newBuilder() to construct.
     private GetBookingHistoryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -11064,7 +11064,7 @@ public final class Trip {
     @java.lang.Override
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
-            UnusedPrivateParameter unused) {
+        UnusedPrivateParameter unused) {
       return new GetBookingHistoryResponse();
     }
 
@@ -11074,16 +11074,16 @@ public final class Trip {
       return this.unknownFields;
     }
     private GetBookingHistoryResponse(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -11111,12 +11111,12 @@ public final class Trip {
                 mutable_bitField0_ |= 0x00000001;
               }
               result_.add(
-                      input.readMessage(proto.grpc.Trip.TripBooking.parser(), extensionRegistry));
+                  input.readMessage(proto.grpc.Trip.TripBooking.parser(), extensionRegistry));
               break;
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -11129,7 +11129,7 @@ public final class Trip {
         throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           result_ = java.util.Collections.unmodifiableList(result_);
@@ -11139,16 +11139,16 @@ public final class Trip {
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return proto.grpc.Trip.internal_static_TripService_grpc_GetBookingHistoryResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
+        internalGetFieldAccessorTable() {
       return proto.grpc.Trip.internal_static_TripService_grpc_GetBookingHistoryResponse_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                      proto.grpc.Trip.GetBookingHistoryResponse.class, proto.grpc.Trip.GetBookingHistoryResponse.Builder.class);
+          .ensureFieldAccessorsInitialized(
+              proto.grpc.Trip.GetBookingHistoryResponse.class, proto.grpc.Trip.GetBookingHistoryResponse.Builder.class);
     }
 
     public static final int PAGINATION_FIELD_NUMBER = 1;
@@ -11190,8 +11190,8 @@ public final class Trip {
      * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends proto.grpc.Trip.TripBookingOrBuilder>
-    getResultOrBuilderList() {
+    public java.util.List<? extends proto.grpc.Trip.TripBookingOrBuilder> 
+        getResultOrBuilderList() {
       return result_;
     }
     /**
@@ -11213,7 +11213,7 @@ public final class Trip {
      */
     @java.lang.Override
     public proto.grpc.Trip.TripBookingOrBuilder getResultOrBuilder(
-            int index) {
+        int index) {
       return result_.get(index);
     }
 
@@ -11230,7 +11230,7 @@ public final class Trip {
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (pagination_ != null) {
         output.writeMessage(1, getPagination());
       }
@@ -11248,11 +11248,11 @@ public final class Trip {
       size = 0;
       if (pagination_ != null) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(1, getPagination());
+          .computeMessageSize(1, getPagination());
       }
       for (int i = 0; i < result_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(2, result_.get(i));
+          .computeMessageSize(2, result_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11262,7 +11262,7 @@ public final class Trip {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof proto.grpc.Trip.GetBookingHistoryResponse)) {
         return super.equals(obj);
@@ -11272,10 +11272,10 @@ public final class Trip {
       if (hasPagination() != other.hasPagination()) return false;
       if (hasPagination()) {
         if (!getPagination()
-                .equals(other.getPagination())) return false;
+            .equals(other.getPagination())) return false;
       }
       if (!getResultList()
-              .equals(other.getResultList())) return false;
+          .equals(other.getResultList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11301,73 +11301,73 @@ public final class Trip {
     }
 
     public static proto.grpc.Trip.GetBookingHistoryResponse parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetBookingHistoryResponse parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetBookingHistoryResponse parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetBookingHistoryResponse parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetBookingHistoryResponse parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static proto.grpc.Trip.GetBookingHistoryResponse parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static proto.grpc.Trip.GetBookingHistoryResponse parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetBookingHistoryResponse parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.GetBookingHistoryResponse parseDelimitedFrom(java.io.InputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetBookingHistoryResponse parseDelimitedFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static proto.grpc.Trip.GetBookingHistoryResponse parseFrom(
-            com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
     public static proto.grpc.Trip.GetBookingHistoryResponse parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     @java.lang.Override
@@ -11381,12 +11381,12 @@ public final class Trip {
     @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
     @java.lang.Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -11394,20 +11394,20 @@ public final class Trip {
      * Protobuf type {@code TripService.grpc.GetBookingHistoryResponse}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:TripService.grpc.GetBookingHistoryResponse)
-            proto.grpc.Trip.GetBookingHistoryResponseOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:TripService.grpc.GetBookingHistoryResponse)
+        proto.grpc.Trip.GetBookingHistoryResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
+          getDescriptor() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetBookingHistoryResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+          internalGetFieldAccessorTable() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetBookingHistoryResponse_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        proto.grpc.Trip.GetBookingHistoryResponse.class, proto.grpc.Trip.GetBookingHistoryResponse.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                proto.grpc.Trip.GetBookingHistoryResponse.class, proto.grpc.Trip.GetBookingHistoryResponse.Builder.class);
       }
 
       // Construct using proto.grpc.Trip.GetBookingHistoryResponse.newBuilder()
@@ -11416,7 +11416,7 @@ public final class Trip {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -11446,7 +11446,7 @@ public final class Trip {
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return proto.grpc.Trip.internal_static_TripService_grpc_GetBookingHistoryResponse_descriptor;
       }
 
@@ -11492,30 +11492,30 @@ public final class Trip {
       }
       @java.lang.Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
-              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
       @java.lang.Override
@@ -11551,9 +11551,9 @@ public final class Trip {
               resultBuilder_ = null;
               result_ = other.result_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              resultBuilder_ =
-                      com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                              getResultFieldBuilder() : null;
+              resultBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getResultFieldBuilder() : null;
             } else {
               resultBuilder_.addAllMessages(other.result_);
             }
@@ -11571,9 +11571,9 @@ public final class Trip {
 
       @java.lang.Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
         proto.grpc.Trip.GetBookingHistoryResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
@@ -11591,7 +11591,7 @@ public final class Trip {
 
       private proto.grpc.Trip.Pagination pagination_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              proto.grpc.Trip.Pagination, proto.grpc.Trip.Pagination.Builder, proto.grpc.Trip.PaginationOrBuilder> paginationBuilder_;
+          proto.grpc.Trip.Pagination, proto.grpc.Trip.Pagination.Builder, proto.grpc.Trip.PaginationOrBuilder> paginationBuilder_;
       /**
        * <code>.TripService.grpc.Pagination pagination = 1;</code>
        * @return Whether the pagination field is set.
@@ -11630,7 +11630,7 @@ public final class Trip {
        * <code>.TripService.grpc.Pagination pagination = 1;</code>
        */
       public Builder setPagination(
-              proto.grpc.Trip.Pagination.Builder builderForValue) {
+          proto.grpc.Trip.Pagination.Builder builderForValue) {
         if (paginationBuilder_ == null) {
           pagination_ = builderForValue.build();
           onChanged();
@@ -11647,7 +11647,7 @@ public final class Trip {
         if (paginationBuilder_ == null) {
           if (pagination_ != null) {
             pagination_ =
-                    proto.grpc.Trip.Pagination.newBuilder(pagination_).mergeFrom(value).buildPartial();
+              proto.grpc.Trip.Pagination.newBuilder(pagination_).mergeFrom(value).buildPartial();
           } else {
             pagination_ = value;
           }
@@ -11676,7 +11676,7 @@ public final class Trip {
        * <code>.TripService.grpc.Pagination pagination = 1;</code>
        */
       public proto.grpc.Trip.Pagination.Builder getPaginationBuilder() {
-
+        
         onChanged();
         return getPaginationFieldBuilder().getBuilder();
       }
@@ -11688,18 +11688,18 @@ public final class Trip {
           return paginationBuilder_.getMessageOrBuilder();
         } else {
           return pagination_ == null ?
-                  proto.grpc.Trip.Pagination.getDefaultInstance() : pagination_;
+              proto.grpc.Trip.Pagination.getDefaultInstance() : pagination_;
         }
       }
       /**
        * <code>.TripService.grpc.Pagination pagination = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              proto.grpc.Trip.Pagination, proto.grpc.Trip.Pagination.Builder, proto.grpc.Trip.PaginationOrBuilder>
-      getPaginationFieldBuilder() {
+          proto.grpc.Trip.Pagination, proto.grpc.Trip.Pagination.Builder, proto.grpc.Trip.PaginationOrBuilder> 
+          getPaginationFieldBuilder() {
         if (paginationBuilder_ == null) {
           paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  proto.grpc.Trip.Pagination, proto.grpc.Trip.Pagination.Builder, proto.grpc.Trip.PaginationOrBuilder>(
+              proto.grpc.Trip.Pagination, proto.grpc.Trip.Pagination.Builder, proto.grpc.Trip.PaginationOrBuilder>(
                   getPagination(),
                   getParentForChildren(),
                   isClean());
@@ -11709,16 +11709,16 @@ public final class Trip {
       }
 
       private java.util.List<proto.grpc.Trip.TripBooking> result_ =
-              java.util.Collections.emptyList();
+        java.util.Collections.emptyList();
       private void ensureResultIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
           result_ = new java.util.ArrayList<proto.grpc.Trip.TripBooking>(result_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder> resultBuilder_;
+          proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder> resultBuilder_;
 
       /**
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
@@ -11754,7 +11754,7 @@ public final class Trip {
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
        */
       public Builder setResult(
-              int index, proto.grpc.Trip.TripBooking value) {
+          int index, proto.grpc.Trip.TripBooking value) {
         if (resultBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11771,7 +11771,7 @@ public final class Trip {
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
        */
       public Builder setResult(
-              int index, proto.grpc.Trip.TripBooking.Builder builderForValue) {
+          int index, proto.grpc.Trip.TripBooking.Builder builderForValue) {
         if (resultBuilder_ == null) {
           ensureResultIsMutable();
           result_.set(index, builderForValue.build());
@@ -11801,7 +11801,7 @@ public final class Trip {
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
        */
       public Builder addResult(
-              int index, proto.grpc.Trip.TripBooking value) {
+          int index, proto.grpc.Trip.TripBooking value) {
         if (resultBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11818,7 +11818,7 @@ public final class Trip {
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
        */
       public Builder addResult(
-              proto.grpc.Trip.TripBooking.Builder builderForValue) {
+          proto.grpc.Trip.TripBooking.Builder builderForValue) {
         if (resultBuilder_ == null) {
           ensureResultIsMutable();
           result_.add(builderForValue.build());
@@ -11832,7 +11832,7 @@ public final class Trip {
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
        */
       public Builder addResult(
-              int index, proto.grpc.Trip.TripBooking.Builder builderForValue) {
+          int index, proto.grpc.Trip.TripBooking.Builder builderForValue) {
         if (resultBuilder_ == null) {
           ensureResultIsMutable();
           result_.add(index, builderForValue.build());
@@ -11846,11 +11846,11 @@ public final class Trip {
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
        */
       public Builder addAllResult(
-              java.lang.Iterable<? extends proto.grpc.Trip.TripBooking> values) {
+          java.lang.Iterable<? extends proto.grpc.Trip.TripBooking> values) {
         if (resultBuilder_ == null) {
           ensureResultIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                  values, result_);
+              values, result_);
           onChanged();
         } else {
           resultBuilder_.addAllMessages(values);
@@ -11887,14 +11887,14 @@ public final class Trip {
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
        */
       public proto.grpc.Trip.TripBooking.Builder getResultBuilder(
-              int index) {
+          int index) {
         return getResultFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
        */
       public proto.grpc.Trip.TripBookingOrBuilder getResultOrBuilder(
-              int index) {
+          int index) {
         if (resultBuilder_ == null) {
           return result_.get(index);  } else {
           return resultBuilder_.getMessageOrBuilder(index);
@@ -11903,8 +11903,8 @@ public final class Trip {
       /**
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
        */
-      public java.util.List<? extends proto.grpc.Trip.TripBookingOrBuilder>
-      getResultOrBuilderList() {
+      public java.util.List<? extends proto.grpc.Trip.TripBookingOrBuilder> 
+           getResultOrBuilderList() {
         if (resultBuilder_ != null) {
           return resultBuilder_.getMessageOrBuilderList();
         } else {
@@ -11916,29 +11916,29 @@ public final class Trip {
        */
       public proto.grpc.Trip.TripBooking.Builder addResultBuilder() {
         return getResultFieldBuilder().addBuilder(
-                proto.grpc.Trip.TripBooking.getDefaultInstance());
+            proto.grpc.Trip.TripBooking.getDefaultInstance());
       }
       /**
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
        */
       public proto.grpc.Trip.TripBooking.Builder addResultBuilder(
-              int index) {
+          int index) {
         return getResultFieldBuilder().addBuilder(
-                index, proto.grpc.Trip.TripBooking.getDefaultInstance());
+            index, proto.grpc.Trip.TripBooking.getDefaultInstance());
       }
       /**
        * <code>repeated .TripService.grpc.TripBooking result = 2;</code>
        */
-      public java.util.List<proto.grpc.Trip.TripBooking.Builder>
-      getResultBuilderList() {
+      public java.util.List<proto.grpc.Trip.TripBooking.Builder> 
+           getResultBuilderList() {
         return getResultFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder>
-      getResultFieldBuilder() {
+          proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder> 
+          getResultFieldBuilder() {
         if (resultBuilder_ == null) {
           resultBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                  proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder>(
+              proto.grpc.Trip.TripBooking, proto.grpc.Trip.TripBooking.Builder, proto.grpc.Trip.TripBookingOrBuilder>(
                   result_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -11949,13 +11949,13 @@ public final class Trip {
       }
       @java.lang.Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -11974,12 +11974,12 @@ public final class Trip {
     }
 
     private static final com.google.protobuf.Parser<GetBookingHistoryResponse>
-            PARSER = new com.google.protobuf.AbstractParser<GetBookingHistoryResponse>() {
+        PARSER = new com.google.protobuf.AbstractParser<GetBookingHistoryResponse>() {
       @java.lang.Override
       public GetBookingHistoryResponse parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new GetBookingHistoryResponse(input, extensionRegistry);
       }
     };
@@ -12001,216 +12001,216 @@ public final class Trip {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_Pagination_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_Pagination_fieldAccessorTable;
+    internal_static_TripService_grpc_Pagination_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_Pagination_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_TripBooking_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_TripBooking_fieldAccessorTable;
+    internal_static_TripService_grpc_TripBooking_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_TripBooking_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_SearchTripPreviewRequest_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_SearchTripPreviewRequest_fieldAccessorTable;
+    internal_static_TripService_grpc_SearchTripPreviewRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_SearchTripPreviewRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_SearchTripPreviewResponse_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_SearchTripPreviewResponse_fieldAccessorTable;
+    internal_static_TripService_grpc_SearchTripPreviewResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_SearchTripPreviewResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_ConfirmBookingRequest_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_ConfirmBookingRequest_fieldAccessorTable;
+    internal_static_TripService_grpc_ConfirmBookingRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_ConfirmBookingRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_ConfirmBookingResponse_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_ConfirmBookingResponse_fieldAccessorTable;
+    internal_static_TripService_grpc_ConfirmBookingResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_ConfirmBookingResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_GetIncompletedBookingRequest_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_GetIncompletedBookingRequest_fieldAccessorTable;
+    internal_static_TripService_grpc_GetIncompletedBookingRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_GetIncompletedBookingRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_GetIncompletedBookingResponse_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_GetIncompletedBookingResponse_fieldAccessorTable;
+    internal_static_TripService_grpc_GetIncompletedBookingResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_GetIncompletedBookingResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_UpdateBookingRequest_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_UpdateBookingRequest_fieldAccessorTable;
+    internal_static_TripService_grpc_UpdateBookingRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_UpdateBookingRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_UpdateBookingResponse_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_UpdateBookingResponse_fieldAccessorTable;
+    internal_static_TripService_grpc_UpdateBookingResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_UpdateBookingResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_GetBookingHistoryRequest_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_GetBookingHistoryRequest_fieldAccessorTable;
+    internal_static_TripService_grpc_GetBookingHistoryRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_GetBookingHistoryRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-          internal_static_TripService_grpc_GetBookingHistoryResponse_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internal_static_TripService_grpc_GetBookingHistoryResponse_fieldAccessorTable;
+    internal_static_TripService_grpc_GetBookingHistoryResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TripService_grpc_GetBookingHistoryResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
-  getDescriptor() {
+      getDescriptor() {
     return descriptor;
   }
   private static  com.google.protobuf.Descriptors.FileDescriptor
-          descriptor;
+      descriptor;
   static {
     java.lang.String[] descriptorData = {
-            "\n\ntrip.proto\022\020TripService.grpc\032\037google/p" +
-                    "rotobuf/timestamp.proto\"\\\n\nPagination\022\024\n" +
-                    "\014current_page\030\001 \001(\004\022\021\n\tprev_page\030\002 \001(\004\022\021" +
-                    "\n\tnext_page\030\003 \001(\004\022\022\n\ntotal_page\030\004 \001(\004\"\236\002" +
-                    "\n\013TripBooking\022\n\n\002id\030\001 \001(\004\022\016\n\006pickup\030\002 \001(" +
-                    "\t\022\023\n\013destination\030\003 \001(\t\022\020\n\010distance\030\004 \001(\001" +
-                    "\022\014\n\004fare\030\005 \001(\001\022\023\n\013card_number\030\006 \001(\t\022?\n\033e" +
-                    "stimated_arrival_date_time\030\007 \001(\0132\032.googl" +
-                    "e.protobuf.Timestamp\022\036\n\026estimated_waitin" +
-                    "g_time\030\010 \001(\003\0227\n\016booking_status\030\t \001(\0162\037.T" +
-                    "ripService.grpc.BookingStatus\022\017\n\007user_id" +
-                    "\030\n \001(\004\"?\n\030SearchTripPreviewRequest\022\016\n\006pi" +
-                    "ckup\030\001 \001(\t\022\023\n\013destination\030\002 \001(\t\"\203\002\n\031Sear" +
-                    "chTripPreviewResponse\022\016\n\006pickup\030\001 \001(\t\022\023\n" +
-                    "\013destination\030\002 \001(\t\022\020\n\010distance\030\003 \001(\001\022\014\n\004" +
-                    "fare\030\004 \001(\001\022?\n\033estimated_arrival_date_tim" +
-                    "e\030\005 \001(\0132\032.google.protobuf.Timestamp\022\036\n\026e" +
-                    "stimated_waiting_time\030\006 \001(\003\022\036\n\026num_of_av" +
-                    "ailable_taxis\030\007 \001(\003\022 \n\030nearest_taxi_coor" +
-                    "dinates\030\010 \003(\001\"\234\002\n\025ConfirmBookingRequest\022" +
-                    "\016\n\006pickup\030\001 \001(\t\022\023\n\013destination\030\002 \001(\t\022\020\n\010" +
-                    "distance\030\003 \001(\001\022\014\n\004fare\030\004 \001(\001\022\023\n\013card_num" +
-                    "ber\030\005 \001(\t\022?\n\033estimated_arrival_date_time" +
-                    "\030\006 \001(\0132\032.google.protobuf.Timestamp\022\036\n\026es" +
-                    "timated_waiting_time\030\007 \001(\003\0227\n\016booking_st" +
-                    "atus\030\010 \001(\0162\037.TripService.grpc.BookingSta" +
-                    "tus\022\017\n\007user_id\030\t \001(\004\"(\n\026ConfirmBookingRe" +
-                    "sponse\022\016\n\006result\030\001 \001(\t\"h\n\034GetIncompleted" +
-                    "BookingRequest\022\017\n\007user_id\030\001 \001(\004\0227\n\016booki" +
-                    "ng_status\030\002 \001(\0162\037.TripService.grpc.Booki" +
-                    "ngStatus\"T\n\035GetIncompletedBookingRespons" +
-                    "e\0223\n\014trip_booking\030\001 \001(\0132\035.TripService.gr" +
-                    "pc.TripBooking\"\247\002\n\024UpdateBookingRequest\022" +
-                    "\n\n\002id\030\001 \001(\004\022\016\n\006pickup\030\002 \001(\t\022\023\n\013destinati" +
-                    "on\030\003 \001(\t\022\020\n\010distance\030\004 \001(\001\022\014\n\004fare\030\005 \001(\001" +
-                    "\022\023\n\013card_number\030\006 \001(\t\022?\n\033estimated_arriv" +
-                    "al_date_time\030\007 \001(\0132\032.google.protobuf.Tim" +
-                    "estamp\022\036\n\026estimated_waiting_time\030\010 \001(\003\0227" +
-                    "\n\016booking_status\030\t \001(\0162\037.TripService.grp" +
-                    "c.BookingStatus\022\017\n\007user_id\030\n \001(\004\"\'\n\025Upda" +
-                    "teBookingResponse\022\016\n\006result\030\001 \001(\t\"\226\001\n\030Ge" +
-                    "tBookingHistoryRequest\022\014\n\004page\030\001 \001(\004\022\r\n\005" +
-                    "limit\030\002 \001(\004\022\017\n\007user_id\030\003 \001(\004\0229\n\020booking_" +
-                    "statuses\030\004 \003(\0162\037.TripService.grpc.Bookin" +
-                    "gStatus\022\021\n\torder_asc\030\005 \001(\010\"|\n\031GetBooking" +
-                    "HistoryResponse\0220\n\npagination\030\001 \001(\0132\034.Tr" +
-                    "ipService.grpc.Pagination\022-\n\006result\030\002 \003(" +
-                    "\0132\035.TripService.grpc.TripBooking*=\n\rBook" +
-                    "ingStatus\022\017\n\013INCOMPLETED\020\000\022\r\n\tCOMPLETED\020" +
-                    "\001\022\014\n\010CANCELED\020\0022\260\004\n\013TripService\022l\n\021Searc" +
-                    "hTripPreview\022*.TripService.grpc.SearchTr" +
-                    "ipPreviewRequest\032+.TripService.grpc.Sear" +
-                    "chTripPreviewResponse\022c\n\016ConfirmBooking\022" +
-                    "\'.TripService.grpc.ConfirmBookingRequest" +
-                    "\032(.TripService.grpc.ConfirmBookingRespon" +
-                    "se\022x\n\025GetIncompletedBooking\022..TripServic" +
-                    "e.grpc.GetIncompletedBookingRequest\032/.Tr" +
-                    "ipService.grpc.GetIncompletedBookingResp" +
-                    "onse\022f\n\023UpdateBookingStatus\022&.TripServic" +
-                    "e.grpc.UpdateBookingRequest\032\'.TripServic" +
-                    "e.grpc.UpdateBookingResponse\022l\n\021GetBooki" +
-                    "ngHistory\022*.TripService.grpc.GetBookingH" +
-                    "istoryRequest\032+.TripService.grpc.GetBook" +
-                    "ingHistoryResponseB\014\n\nproto.grpcb\006proto3"
+      "\n\ntrip.proto\022\020TripService.grpc\032\037google/p" +
+      "rotobuf/timestamp.proto\"\\\n\nPagination\022\024\n" +
+      "\014current_page\030\001 \001(\004\022\021\n\tprev_page\030\002 \001(\004\022\021" +
+      "\n\tnext_page\030\003 \001(\004\022\022\n\ntotal_page\030\004 \001(\004\"\236\002" +
+      "\n\013TripBooking\022\n\n\002id\030\001 \001(\004\022\016\n\006pickup\030\002 \001(" +
+      "\t\022\023\n\013destination\030\003 \001(\t\022\020\n\010distance\030\004 \001(\001" +
+      "\022\014\n\004fare\030\005 \001(\001\022\023\n\013card_number\030\006 \001(\t\022?\n\033e" +
+      "stimated_arrival_date_time\030\007 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022\036\n\026estimated_waitin" +
+      "g_time\030\010 \001(\003\0227\n\016booking_status\030\t \001(\0162\037.T" +
+      "ripService.grpc.BookingStatus\022\017\n\007user_id" +
+      "\030\n \001(\004\"?\n\030SearchTripPreviewRequest\022\016\n\006pi" +
+      "ckup\030\001 \001(\t\022\023\n\013destination\030\002 \001(\t\"\203\002\n\031Sear" +
+      "chTripPreviewResponse\022\016\n\006pickup\030\001 \001(\t\022\023\n" +
+      "\013destination\030\002 \001(\t\022\020\n\010distance\030\003 \001(\001\022\014\n\004" +
+      "fare\030\004 \001(\001\022?\n\033estimated_arrival_date_tim" +
+      "e\030\005 \001(\0132\032.google.protobuf.Timestamp\022\036\n\026e" +
+      "stimated_waiting_time\030\006 \001(\003\022\036\n\026num_of_av" +
+      "ailable_taxis\030\007 \001(\003\022 \n\030nearest_taxi_coor" +
+      "dinates\030\010 \003(\001\"\234\002\n\025ConfirmBookingRequest\022" +
+      "\016\n\006pickup\030\001 \001(\t\022\023\n\013destination\030\002 \001(\t\022\020\n\010" +
+      "distance\030\003 \001(\001\022\014\n\004fare\030\004 \001(\001\022\023\n\013card_num" +
+      "ber\030\005 \001(\t\022?\n\033estimated_arrival_date_time" +
+      "\030\006 \001(\0132\032.google.protobuf.Timestamp\022\036\n\026es" +
+      "timated_waiting_time\030\007 \001(\003\0227\n\016booking_st" +
+      "atus\030\010 \001(\0162\037.TripService.grpc.BookingSta" +
+      "tus\022\017\n\007user_id\030\t \001(\004\"(\n\026ConfirmBookingRe" +
+      "sponse\022\016\n\006result\030\001 \001(\t\"h\n\034GetIncompleted" +
+      "BookingRequest\022\017\n\007user_id\030\001 \001(\004\0227\n\016booki" +
+      "ng_status\030\002 \001(\0162\037.TripService.grpc.Booki" +
+      "ngStatus\"T\n\035GetIncompletedBookingRespons" +
+      "e\0223\n\014trip_booking\030\001 \001(\0132\035.TripService.gr" +
+      "pc.TripBooking\"\247\002\n\024UpdateBookingRequest\022" +
+      "\n\n\002id\030\001 \001(\004\022\016\n\006pickup\030\002 \001(\t\022\023\n\013destinati" +
+      "on\030\003 \001(\t\022\020\n\010distance\030\004 \001(\001\022\014\n\004fare\030\005 \001(\001" +
+      "\022\023\n\013card_number\030\006 \001(\t\022?\n\033estimated_arriv" +
+      "al_date_time\030\007 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022\036\n\026estimated_waiting_time\030\010 \001(\003\0227" +
+      "\n\016booking_status\030\t \001(\0162\037.TripService.grp" +
+      "c.BookingStatus\022\017\n\007user_id\030\n \001(\004\"\'\n\025Upda" +
+      "teBookingResponse\022\016\n\006result\030\001 \001(\t\"\226\001\n\030Ge" +
+      "tBookingHistoryRequest\022\014\n\004page\030\001 \001(\004\022\r\n\005" +
+      "limit\030\002 \001(\004\022\017\n\007user_id\030\003 \001(\004\0229\n\020booking_" +
+      "statuses\030\004 \003(\0162\037.TripService.grpc.Bookin" +
+      "gStatus\022\021\n\torder_asc\030\005 \001(\010\"|\n\031GetBooking" +
+      "HistoryResponse\0220\n\npagination\030\001 \001(\0132\034.Tr" +
+      "ipService.grpc.Pagination\022-\n\006result\030\002 \003(" +
+      "\0132\035.TripService.grpc.TripBooking*=\n\rBook" +
+      "ingStatus\022\017\n\013INCOMPLETED\020\000\022\r\n\tCOMPLETED\020" +
+      "\001\022\014\n\010CANCELED\020\0022\260\004\n\013TripService\022l\n\021Searc" +
+      "hTripPreview\022*.TripService.grpc.SearchTr" +
+      "ipPreviewRequest\032+.TripService.grpc.Sear" +
+      "chTripPreviewResponse\022c\n\016ConfirmBooking\022" +
+      "\'.TripService.grpc.ConfirmBookingRequest" +
+      "\032(.TripService.grpc.ConfirmBookingRespon" +
+      "se\022x\n\025GetIncompletedBooking\022..TripServic" +
+      "e.grpc.GetIncompletedBookingRequest\032/.Tr" +
+      "ipService.grpc.GetIncompletedBookingResp" +
+      "onse\022f\n\023UpdateBookingStatus\022&.TripServic" +
+      "e.grpc.UpdateBookingRequest\032\'.TripServic" +
+      "e.grpc.UpdateBookingResponse\022l\n\021GetBooki" +
+      "ngHistory\022*.TripService.grpc.GetBookingH" +
+      "istoryRequest\032+.TripService.grpc.GetBook" +
+      "ingHistoryResponseB\014\n\nproto.grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
-            .internalBuildGeneratedFileFrom(descriptorData,
-                    new com.google.protobuf.Descriptors.FileDescriptor[] {
-                            com.google.protobuf.TimestampProto.getDescriptor(),
-                    });
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.TimestampProto.getDescriptor(),
+        });
     internal_static_TripService_grpc_Pagination_descriptor =
-            getDescriptor().getMessageTypes().get(0);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_TripService_grpc_Pagination_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_Pagination_descriptor,
-            new java.lang.String[] { "CurrentPage", "PrevPage", "NextPage", "TotalPage", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_Pagination_descriptor,
+        new java.lang.String[] { "CurrentPage", "PrevPage", "NextPage", "TotalPage", });
     internal_static_TripService_grpc_TripBooking_descriptor =
-            getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_TripService_grpc_TripBooking_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_TripBooking_descriptor,
-            new java.lang.String[] { "Id", "Pickup", "Destination", "Distance", "Fare", "CardNumber", "EstimatedArrivalDateTime", "EstimatedWaitingTime", "BookingStatus", "UserId", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_TripBooking_descriptor,
+        new java.lang.String[] { "Id", "Pickup", "Destination", "Distance", "Fare", "CardNumber", "EstimatedArrivalDateTime", "EstimatedWaitingTime", "BookingStatus", "UserId", });
     internal_static_TripService_grpc_SearchTripPreviewRequest_descriptor =
-            getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_TripService_grpc_SearchTripPreviewRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_SearchTripPreviewRequest_descriptor,
-            new java.lang.String[] { "Pickup", "Destination", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_SearchTripPreviewRequest_descriptor,
+        new java.lang.String[] { "Pickup", "Destination", });
     internal_static_TripService_grpc_SearchTripPreviewResponse_descriptor =
-            getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_TripService_grpc_SearchTripPreviewResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_SearchTripPreviewResponse_descriptor,
-            new java.lang.String[] { "Pickup", "Destination", "Distance", "Fare", "EstimatedArrivalDateTime", "EstimatedWaitingTime", "NumOfAvailableTaxis", "NearestTaxiCoordinates", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_SearchTripPreviewResponse_descriptor,
+        new java.lang.String[] { "Pickup", "Destination", "Distance", "Fare", "EstimatedArrivalDateTime", "EstimatedWaitingTime", "NumOfAvailableTaxis", "NearestTaxiCoordinates", });
     internal_static_TripService_grpc_ConfirmBookingRequest_descriptor =
-            getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_TripService_grpc_ConfirmBookingRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_ConfirmBookingRequest_descriptor,
-            new java.lang.String[] { "Pickup", "Destination", "Distance", "Fare", "CardNumber", "EstimatedArrivalDateTime", "EstimatedWaitingTime", "BookingStatus", "UserId", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_ConfirmBookingRequest_descriptor,
+        new java.lang.String[] { "Pickup", "Destination", "Distance", "Fare", "CardNumber", "EstimatedArrivalDateTime", "EstimatedWaitingTime", "BookingStatus", "UserId", });
     internal_static_TripService_grpc_ConfirmBookingResponse_descriptor =
-            getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_TripService_grpc_ConfirmBookingResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_ConfirmBookingResponse_descriptor,
-            new java.lang.String[] { "Result", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_ConfirmBookingResponse_descriptor,
+        new java.lang.String[] { "Result", });
     internal_static_TripService_grpc_GetIncompletedBookingRequest_descriptor =
-            getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_TripService_grpc_GetIncompletedBookingRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_GetIncompletedBookingRequest_descriptor,
-            new java.lang.String[] { "UserId", "BookingStatus", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_GetIncompletedBookingRequest_descriptor,
+        new java.lang.String[] { "UserId", "BookingStatus", });
     internal_static_TripService_grpc_GetIncompletedBookingResponse_descriptor =
-            getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_TripService_grpc_GetIncompletedBookingResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_GetIncompletedBookingResponse_descriptor,
-            new java.lang.String[] { "TripBooking", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_GetIncompletedBookingResponse_descriptor,
+        new java.lang.String[] { "TripBooking", });
     internal_static_TripService_grpc_UpdateBookingRequest_descriptor =
-            getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_TripService_grpc_UpdateBookingRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_UpdateBookingRequest_descriptor,
-            new java.lang.String[] { "Id", "Pickup", "Destination", "Distance", "Fare", "CardNumber", "EstimatedArrivalDateTime", "EstimatedWaitingTime", "BookingStatus", "UserId", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_UpdateBookingRequest_descriptor,
+        new java.lang.String[] { "Id", "Pickup", "Destination", "Distance", "Fare", "CardNumber", "EstimatedArrivalDateTime", "EstimatedWaitingTime", "BookingStatus", "UserId", });
     internal_static_TripService_grpc_UpdateBookingResponse_descriptor =
-            getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_TripService_grpc_UpdateBookingResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_UpdateBookingResponse_descriptor,
-            new java.lang.String[] { "Result", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_UpdateBookingResponse_descriptor,
+        new java.lang.String[] { "Result", });
     internal_static_TripService_grpc_GetBookingHistoryRequest_descriptor =
-            getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_TripService_grpc_GetBookingHistoryRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_GetBookingHistoryRequest_descriptor,
-            new java.lang.String[] { "Page", "Limit", "UserId", "BookingStatuses", "OrderAsc", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_GetBookingHistoryRequest_descriptor,
+        new java.lang.String[] { "Page", "Limit", "UserId", "BookingStatuses", "OrderAsc", });
     internal_static_TripService_grpc_GetBookingHistoryResponse_descriptor =
-            getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_TripService_grpc_GetBookingHistoryResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_TripService_grpc_GetBookingHistoryResponse_descriptor,
-            new java.lang.String[] { "Pagination", "Result", });
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TripService_grpc_GetBookingHistoryResponse_descriptor,
+        new java.lang.String[] { "Pagination", "Result", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

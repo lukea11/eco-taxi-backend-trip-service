@@ -8,7 +8,6 @@ import io.grpc.stub.StreamObserver;
 import org.checkerframework.common.value.qual.EnsuresMinLenIf;
 import proto.grpc.Trip;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TripsViewer implements IViewTrips {

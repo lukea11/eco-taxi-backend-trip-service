@@ -7,16 +7,14 @@ import proto.grpc.Trip;
 import java.net.URL;
 import java.net.HttpURLConnection;
 import java.io.IOException;
-import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.util.Scanner;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import com.google.protobuf.Timestamp;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import com.google.maps.GeoApiContext;

@@ -2,7 +2,6 @@ package com.example.Service;
 
 import com.example.Interfaces.IGetIncompleteTrip;
 import com.example.Repository.ITripRepository;
-import com.example.Repository.TripRepository;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import org.springframework.stereotype.Service;

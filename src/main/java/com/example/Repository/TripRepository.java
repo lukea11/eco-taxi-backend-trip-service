@@ -11,9 +11,22 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import org.springframework.stereotype.Repository;
 import proto.grpc.Trip.BookingStatus;
 import java.sql.Timestamp;
+import io.github.cdimascio.dotenv.Dotenv;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
+import org.springframework.beans.factory.annotation.Value;
 
 @Repository
 public class TripRepository implements ITripRepository{
+    // Load environment variables from the .env file
+    Dotenv dotenv = Dotenv.load();
+
+    private String host = dotenv.get("MYSQL_HOST");
+    private String port = dotenv.get("MYSQL_PORT");
+    private String user = dotenv.get("MYSQL_USER");
+    private String password = dotenv.get("MYSQL_PASSWORD");
+    private String database = dotenv.get("MYSQL_DATABASE");
 
     private static Connection connection;
 
@@ -23,12 +36,13 @@ public class TripRepository implements ITripRepository{
     }
 
     // Method to establish a database connection
-    private static void connectToDatabase() {
+    public void connectToDatabase() {
         try {
+            String jdbcUrl = String.format("jdbc:mysql://%s:%s/%s", host, port, database);
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/trips_schema",
-                    "root",
-                    "Iamhungry123"
+                    jdbcUrl,
+                    user,
+                    password
             );
             System.out.println("Database connection successful!");
         } catch (SQLException e) {
