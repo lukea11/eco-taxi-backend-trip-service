@@ -2,11 +2,19 @@ package com.example;
 
 import com.example.Service.TripBooker;
 import com.example.Service.TripPreviewer;
+import com.example.Service.TripService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import proto.grpc.Trip;
 import io.grpc.stub.StreamObserver;
+import io.grpc.Server;
+import io.grpc.ServerBuilder;
+import io.github.cdimascio.dotenv.Dotenv;
+import io.grpc.stub.StreamObserver;
+import proto.grpc.TripServiceGrpc;
+
+import java.io.IOException;
 
 @SpringBootApplication
 public class TripServiceApplication implements CommandLineRunner {
@@ -19,9 +27,18 @@ public class TripServiceApplication implements CommandLineRunner {
         this.tripBooker = tripBooker;
     }
 
-    public static void main(String[] args) {
-        SpringApplication.run(TripServiceApplication.class, args);
-    }
+   public static void main(String[] args) throws InterruptedException, IOException {
+       SpringApplication.run(TripServiceApplication.class, args);
+       Server server = ServerBuilder.forPort(5003).addService(new TripService()).build();
+       System.out.println("gRPC Trip Service server started on port 5003");
+       try {
+           server.start();
+       } catch (Exception e) {
+           throw new RuntimeException(e);
+       }
+
+       server.awaitTermination();
+   }
 
     @Override
     public void run(String... args) throws Exception {
