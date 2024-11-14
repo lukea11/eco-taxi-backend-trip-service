@@ -6,30 +6,42 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
+import java.io.IOException;
 import java.net.InetSocketAddress;
 
 @SpringBootApplication
 public class TripServiceApplication {
+    private Server server;
 
-
-    public static void main(String[] args) throws InterruptedException{
-        SpringApplication.run(TripServiceApplication.class, args);
-
-        // Start the gRPC server
-        Server server = ServerBuilder.forPort(new InetSocketAddress("127.0.0.1", 5003).getPort())
+    private void start() throws IOException {
+        server = ServerBuilder.forPort(5003)
                 .addService(new TripService())
-                .build();
+                .build()
+                .start();
+        System.out.println("TripService gRPC server started, listening on port 5003");
 
-        try {
-            server.start();
-            System.out.println("gRPC Trip Service server started on port" + server.getPort());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-        server.awaitTermination();
-
-
+        // Add shutdown hook for cleanup
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            System.err.println("Shutting down gRPC server");
+            TripServiceApplication.this.stop();
+        }));
     }
 
+    private void stop() {
+        if (server != null) {
+            server.shutdown();
+        }
+    }
+
+    private void blockUntilShutdown() throws InterruptedException {
+        if (server != null) {
+            server.awaitTermination();
+        }
+    }
+
+    public static void main(String[] args) throws IOException, InterruptedException {
+        final TripServiceApplication server = new TripServiceApplication();
+        server.start();
+        server.blockUntilShutdown();
+    }
 }
