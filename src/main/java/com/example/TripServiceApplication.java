@@ -14,10 +14,10 @@ public class TripServiceApplication {
 
         // Start the gRPC server
         Server server = ServerBuilder.forPort(5003).addService(new TripService()).build();
-        System.out.println("gRPC Trip Service server started on port 5003");
 
         try {
             server.start();
+            System.out.println("gRPC Trip Service server started on port" + server.getPort());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
