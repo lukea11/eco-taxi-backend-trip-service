@@ -45,7 +45,7 @@ public class TripBooker implements IBookTrip {
             newTrip.setDestination(destination);
             newTrip.setDistance(distance);
             newTrip.setFare(fare);
-            newTrip.setEstimatedArrivalDateTime(estimatedArrivalDateTime);
+            newTrip.setEstimatedArrivalDateTime(convertToSqlTimestamp(estimatedArrivalDateTime));
             newTrip.setEstimatedWaitingTime(estimatedWaitingTime);
             newTrip.setCardNumber(cardNumber);
 
@@ -67,6 +67,10 @@ public class TripBooker implements IBookTrip {
             responseObserver.onNext(errorResponse);
             responseObserver.onCompleted();
         }
+    }
+
+    private java.sql.Timestamp convertToSqlTimestamp(Timestamp protobufTimestamp) {
+        return new java.sql.Timestamp(protobufTimestamp.getSeconds() * 1000);
     }
 
     private TripStatus mapBookingStatusToTripStatus(BookingStatus bookingStatus) {

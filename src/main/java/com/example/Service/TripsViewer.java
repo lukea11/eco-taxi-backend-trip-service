@@ -7,6 +7,7 @@ import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import org.checkerframework.common.value.qual.EnsuresMinLenIf;
 import proto.grpc.Trip;
+import com.google.protobuf.Timestamp;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,7 +67,7 @@ public class TripsViewer implements IViewTrips {
                         .setDistance(booking.getDistance())
                         .setFare(booking.getFare())
                         .setCardNumber(booking.getCardNumber())
-                        .setEstimatedArrivalDateTime(booking.getEstimatedArrivalDateTime()) // convert Instant to protobuf Timestamp if necessary
+                        .setEstimatedArrivalDateTime(convertToProtobufTimestamp(booking.getEstimatedArrivalDateTime())) // convert Instant to protobuf Timestamp if necessary
                         .setEstimatedWaitingTime(booking.getEstimatedWaitingTime())
                         .setBookingStatus(Trip.BookingStatus.valueOf(booking.getTripStatus().name())) // Convert to gRPC enum
                         .setUserId(booking.getUserId())
@@ -77,6 +78,9 @@ public class TripsViewer implements IViewTrips {
             responseObserver.onNext(response.build());
             responseObserver.onCompleted();
         }
+    }
+    private com.google.protobuf.Timestamp convertToProtobufTimestamp(java.sql.Timestamp sqlTimestamp) {
+        return com.google.protobuf.Timestamp.newBuilder().setSeconds(sqlTimestamp.getTime() / 1000).build();
     }
 
     private TripStatus mapBookingStatusToTripStatus(Trip.BookingStatus bookingStatus) {

@@ -156,4 +156,5 @@ public abstract class Trip {
     public String getPickup() {
         return this.pickupLocation;
     }
+
 }
