@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
+import java.net.InetSocketAddress;
+
 @SpringBootApplication
 public class TripServiceApplication {
 
@@ -14,7 +16,9 @@ public class TripServiceApplication {
         SpringApplication.run(TripServiceApplication.class, args);
 
         // Start the gRPC server
-        /* Server server = ServerBuilder.forPort(5003).addService(new TripService()).build();
+        Server server = ServerBuilder.forPort(new InetSocketAddress("127.0.0.1", 5003).getPort())
+                .addService(new TripService())
+                .build();
 
         try {
             server.start();
@@ -25,7 +29,7 @@ public class TripServiceApplication {
 
         server.awaitTermination();
 
-         */
+
     }
 
 }

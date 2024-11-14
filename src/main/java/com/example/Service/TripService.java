@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import net.devh.boot.grpc.server.service.GrpcService;
 
 // Controller Class
-@GrpcService
+@Service
 public class TripService extends TripServiceGrpc.TripServiceImplBase {
     // facade design pattern
     private final IViewTrips tripViewer;
