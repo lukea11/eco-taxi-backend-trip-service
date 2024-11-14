@@ -2,7 +2,8 @@ package com.example.Factory;
 
 import com.example.Enums.TripStatus;
 import jakarta.persistence.*;
-import java.sql.Timestamp;
+import com.google.protobuf.Timestamp;
+import java.time.Instant;
 
 
 @Entity
@@ -65,7 +66,10 @@ public abstract class Trip {
         this.distance = 0;
         this.fare = 0;
         this.cardNumber = "";
-        this.estimatedArrivalDateTime = new Timestamp(System.currentTimeMillis() + 300000);
+        this.estimatedArrivalDateTime = Timestamp.newBuilder()
+                .setSeconds(Instant.now().plusSeconds(300).getEpochSecond())
+                .setNanos(Instant.now().getNano())
+                .build();
         this.estimatedWaitingTime = 0;
     }
 

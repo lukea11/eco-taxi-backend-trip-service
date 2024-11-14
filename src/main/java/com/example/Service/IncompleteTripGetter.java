@@ -2,6 +2,7 @@ package com.example.Service;
 
 import com.example.Interfaces.IGetIncompleteTrip;
 import com.example.Repository.ITripRepository;
+import com.example.Repository.TripRepository;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class IncompleteTripGetter implements IGetIncompleteTrip {
                     .setDistance(booking.getDistance())
                     .setFare(booking.getFare())
                     .setCardNumber(booking.getCardNumber())
-                    .setEstimatedArrivalDateTime(convertToProtobufTimestamp(booking.getEstimatedArrivalDateTime())) // convert Instant to protobuf Timestamp if necessary
+                    .setEstimatedArrivalDateTime(booking.getEstimatedArrivalDateTime()) // convert Instant to protobuf Timestamp if necessary
                     .setEstimatedWaitingTime(booking.getEstimatedWaitingTime())
                     .setBookingStatus(Trip.BookingStatus.valueOf(booking.getTripStatus().name())) // Convert to gRPC enum
                     .setUserId(booking.getUserId())
@@ -42,9 +43,5 @@ public class IncompleteTripGetter implements IGetIncompleteTrip {
             responseObserver.onNext(response.build());
             responseObserver.onCompleted();
         }
-    }
-    // Convert `java.sql.Timestamp` to `protobuf.Timestamp` (if needed when retrieving)
-    private com.google.protobuf.Timestamp convertToProtobufTimestamp(java.sql.Timestamp sqlTimestamp) {
-        return com.google.protobuf.Timestamp.newBuilder().setSeconds(sqlTimestamp.getTime() / 1000).build();
     }
 }

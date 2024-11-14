@@ -8,6 +8,7 @@ import io.grpc.stub.StreamObserver;
 import org.checkerframework.common.value.qual.EnsuresMinLenIf;
 import proto.grpc.Trip;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TripsViewer implements IViewTrips {
@@ -26,20 +27,30 @@ public class TripsViewer implements IViewTrips {
         // create list of trip objects
         // store in bookingHistory as TripBooking objects
         List<com.example.Factory.Trip> bookingHistory = tripRepository.findAllTrips((int) page, (int) limit, (int) id, statuses, order); // Fetch data from MySQL
+        long totalPages = (long) tripRepository.getTotalPages((int) limit, (int) id, statuses);
+
+        // For Pagination Object
+        long nextPage = 0, previousPage = 0;
+        if (page == 1){
+            nextPage = -1;
+        } else if (page == totalPages) {
+            previousPage = -1;
+        } else{
+            nextPage = page-1;
+            previousPage = page+1;
+        }
 
         // create Pagination Object
         // Just an example here, plug in the correct values
         Trip.Pagination pagination = Trip.Pagination.newBuilder()
-                .setCurrentPage(1)   // Set current page
-                .setPrevPage(0)      // Set previous page (or any other value)
-                .setNextPage(2)      // Set next page
-                .setTotalPage(10)    // Set total pages
+                .setCurrentPage(page)   // Set current page
+                .setPrevPage(previousPage)      // Set previous page (or any other value)
+                .setNextPage(nextPage)      // Set next page
+                .setTotalPage(totalPages)    // Set total pages
                 .build();
 
         if (bookingHistory.isEmpty()){
-            responseObserver.onError(Status.NOT_FOUND.withDescription("No Trips Found")
-                    .withCause(new TripNotFoundException("ensure correct filters provided in request or make a new Trip"))
-                    .asException());
+            responseObserver.onError(Status.NOT_FOUND.withDescription("No Trips Found").withCause(new TripNotFoundException("ensure correct filters provided in request or make a new Trip")).asException());
         }
 
         else{
@@ -55,7 +66,7 @@ public class TripsViewer implements IViewTrips {
                         .setDistance(booking.getDistance())
                         .setFare(booking.getFare())
                         .setCardNumber(booking.getCardNumber())
-                        .setEstimatedArrivalDateTime(convertToProtobufTimestamp(booking.getEstimatedArrivalDateTime())) // convert Instant to protobuf Timestamp if necessary
+                        .setEstimatedArrivalDateTime(booking.getEstimatedArrivalDateTime()) // convert Instant to protobuf Timestamp if necessary
                         .setEstimatedWaitingTime(booking.getEstimatedWaitingTime())
                         .setBookingStatus(Trip.BookingStatus.valueOf(booking.getTripStatus().name())) // Convert to gRPC enum
                         .setUserId(booking.getUserId())
@@ -66,10 +77,6 @@ public class TripsViewer implements IViewTrips {
             responseObserver.onNext(response.build());
             responseObserver.onCompleted();
         }
-    }
-    // Convert `java.sql.Timestamp` to `protobuf.Timestamp` (if needed when retrieving)
-    private com.google.protobuf.Timestamp convertToProtobufTimestamp(java.sql.Timestamp sqlTimestamp) {
-        return com.google.protobuf.Timestamp.newBuilder().setSeconds(sqlTimestamp.getTime() / 1000).build();
     }
 
     private TripStatus mapBookingStatusToTripStatus(Trip.BookingStatus bookingStatus) {
@@ -85,5 +92,3 @@ public class TripsViewer implements IViewTrips {
         }
     }
 }
-
-
