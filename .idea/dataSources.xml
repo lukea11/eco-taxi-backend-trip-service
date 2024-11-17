@@ -16,6 +16,7 @@
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="trips_schema@localhost [2]" uuid="bf65bae6-1eec-4fde-89b3-60ffcff2dfa8">
+      <driver-ref>mysql_aurora.aws_wrapper</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>software.amazon.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:aws-wrapper:mysql://localhost:3306/trips_schema</jdbc-url>
@@ -27,6 +28,7 @@
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="trips_schema@localhost [3]" uuid="34e5103b-972b-4fb0-bc37-095a4db68ea2">
+      <driver-ref>mysql_aurora.aws_wrapper</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>software.amazon.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:aws-wrapper:mysql://localhost:3306/trips_schema</jdbc-url>
